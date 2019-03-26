@@ -7,3 +7,17 @@ h1 {
 body {
   background: url('assets/bg.svg') no-repeat center top;
 }
+
+.card-body ul {
+  padding-left: 1em;
+  padding-top: 1em;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-weight: 600;
+  color: #5b5b5b !important;
+}
+
+.navbar-brand {
+  padding: 0;
+}

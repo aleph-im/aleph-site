@@ -37,19 +37,28 @@
             <slide>
               <h4 class="text-center">Q2</h4>
               <b-card title="Cross-chain">
-                Proof of concept network alive, with first demo dApps available on data-only mode (no virtual machines or smart contracts yet), no native currency live yet.
+                Tokens living on multiple blockchains, multiple type of addresses usable on the network.
+                <ul>
+                  <li>NULS</li>
+                  <li>Ethereum</li>
+                  <li>NEO...</li>
+                </ul>
               </b-card>
             </slide>
             <slide>
               <h4 class="text-center">Q3</h4>
               <b-card title="Virtual Machines">
-                Proof of concept network alive, with first demo dApps available on data-only mode (no virtual machines or smart contracts yet), no native currency live yet.
+                The "Smart Apps" virtual machine will be developed for this milestone, allowing the Aleph native token to live in a virtual machine by itself. A token swap will take place from the NRC-20 (and ERC-20 if issued) token to the native token.
               </b-card>
             </slide>
             <slide>
               <h4 class="text-center">Q4</h4>
               <b-card title="Next...">
-                Proof of concept network alive, with first demo dApps available on data-only mode (no virtual machines or smart contracts yet), no native currency live yet.
+                <ul>
+                  <li>Specialized nodes</li>
+                  <li>Sharding</li>
+                  <li>...</li>
+                </ul>
               </b-card>
             </slide>
         </carousel>
