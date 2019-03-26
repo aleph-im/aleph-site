@@ -29,13 +29,17 @@
                   :navigationEnabled="true" navigationPrevLabel=" "
                   navigationNextLabel=" " :navigationClickTargetSize="2">
             <slide>
-              <h4 class="text-center">Q1</h4>
+              <h4 class="text-center">
+                Q1 <font-awesome-icon icon="check-circle" class="text-primary"/>
+              </h4>
               <b-card title="Proof-of-Concept">
                 Proof of concept network alive, with first demo dApps available on data-only mode (no virtual machines or smart contracts yet), no native currency live yet.
               </b-card>
             </slide>
             <slide>
-              <h4 class="text-center">Q2</h4>
+              <h4 class="text-center">
+                Q2 <font-awesome-icon icon="check-circle" class="text-muted"/>
+              </h4>
               <b-card title="Cross-chain">
                 Tokens living on multiple blockchains, multiple type of addresses usable on the network.
                 <ul>
@@ -46,13 +50,17 @@
               </b-card>
             </slide>
             <slide>
-              <h4 class="text-center">Q3</h4>
+              <h4 class="text-center">
+                Q3 <font-awesome-icon icon="check-circle" class="text-muted"/>
+              </h4>
               <b-card title="Virtual Machines">
                 The "Smart Apps" virtual machine will be developed for this milestone, allowing the Aleph native token to live in a virtual machine by itself. A token swap will take place from the NRC-20 (and ERC-20 if issued) token to the native token.
               </b-card>
             </slide>
             <slide>
-              <h4 class="text-center">Q4</h4>
+              <h4 class="text-center">
+                Q4 <font-awesome-icon icon="check-circle" class="text-muted"/>
+              </h4>
               <b-card title="Next...">
                 <ul>
                   <li>Specialized nodes</li>

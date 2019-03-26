@@ -41,16 +41,16 @@ export default {
           text: 'Github',
           link: 'https://github.com/aleph-im/pyaleph'
         },
-        {
-          type: 'text',
-          text: 'Roadmap',
-          link: '#roadmap'
-        },
-        {
-          type: 'text',
-          text: 'Press',
-          link: '/press'
-        },
+        // {
+        //   type: 'text',
+        //   text: 'Roadmap',
+        //   link: '#roadmap'
+        // },
+        // {
+        //   type: 'text',
+        //   text: 'Press',
+        //   link: '/press'
+        // },
         {
           type: 'button',
           text: 'Whitepaper',
