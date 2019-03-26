@@ -9,7 +9,7 @@ h1 {
 }
 
 body {
-  background: url('assets/bg.svg') no-repeat center -250px;
+  background: url('assets/bg.svg') no-repeat center -100px;
 }
 
 .card-body ul {
@@ -23,4 +23,36 @@ body {
 
 .navbar-brand {
   padding: 0;
+}
+
+footer {
+  background: $dark-blue;
+  color: $white;
+  padding-top: 1em;
+
+  .brand {
+    color: #fff;
+    margin: 0;
+    img {
+      filter: grayscale(1) contrast(255);
+    }
+  }
+  h6, a {
+    color: #fff;
+  }
+
+  ul {
+    list-style-type: none;
+    font-size: 80%;
+    padding: 0;
+  }
+
+  .copyright {
+    background: rgba(0,0,0,.1);
+    p {
+      padding: .5em 0;
+      margin: 0;
+      font-size: 80%;
+    }
+  }
 }

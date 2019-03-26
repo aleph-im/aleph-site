@@ -26,6 +26,39 @@
         </b-container>
       </b-navbar>
     <router-view></router-view>
+    <footer>
+      <b-container>
+        <b-row>
+          <b-col md="6" xl="8">
+            <h4 class="my-auto mr-4 brand">
+              <img src="./assets/logo.svg" alt="logo" style="margin-bottom: 0.2em;"><span class="ml-2 d-inline-block align-bottom">aleph</span>
+            </h4>
+          </b-col>
+          <b-col md="3" xl="2">
+            <h6>Resources</h6>
+            <ul>
+              <li>
+                <a href="https://github.com/aleph-im/pyaleph">Github</a>
+              </li>
+              <li>
+                <a href="https://github.com/moshemalawach/aleph-whitepaper/raw/master/aleph-whitepaper.pdf">Whitepaper</a>
+              </li>
+            </ul>
+          </b-col>
+          <b-col md="3" xl="2">
+            <h6>Social</h6>
+            <a href="https://t.me/alephim">
+              <i class="fab fa-telegram-plane" />
+            </a>
+          </b-col>
+        </b-row>
+      </b-container>
+      <div class="copyright">
+        <b-container>
+          <p>Copyright ©2019 Aleph Project, all rights reserved.</p>
+        </b-container>
+      </div>
+    </footer>
   </div>
 </template>
 
