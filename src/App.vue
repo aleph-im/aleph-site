@@ -17,7 +17,7 @@
                     {{mitem.text}}
                   </a>
                 </div>
-                <b-nav-item :href="mitem.link" class="align-middle d-block mx-md-4" v-else>
+                <b-nav-item :href="mitem.link" class="align-middle d-block mx-md-2" v-else>
                   {{mitem.text}}
                 </b-nav-item>
               </template>

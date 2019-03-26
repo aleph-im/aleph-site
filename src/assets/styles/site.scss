@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-size: 2.2rem;
   line-height: 1.5em;
@@ -5,7 +9,7 @@ h1 {
 }
 
 body {
-  background: url('assets/bg.svg') no-repeat center top;
+  background: url('assets/bg.svg') no-repeat center -250px;
 }
 
 .card-body ul {
@@ -15,7 +19,6 @@ body {
 
 .navbar-light .navbar-nav .nav-link {
   font-weight: 600;
-  color: #5b5b5b !important;
 }
 
 .navbar-brand {
