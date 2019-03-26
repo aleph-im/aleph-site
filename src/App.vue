@@ -35,7 +35,7 @@
             </h4>
           </b-col>
           <b-col md="3" xl="2">
-            <h6>Resources</h6>
+            <h6 class="mt-2 mt-md-0">Resources</h6>
             <ul>
               <li>
                 <a href="https://github.com/aleph-im/pyaleph">Github</a>
