@@ -6,9 +6,6 @@ import App from './App'
 import router from './router'
 //import ShardsVue from 'shards-vue'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-
 Vue.use(BootstrapVue)
 //Vue.use(ShardsVue)
 Vue.config.productionTip = false

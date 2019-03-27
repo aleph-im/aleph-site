@@ -11,7 +11,7 @@
             applications.
           </p>
           <b-button
-            href="https://github.com/moshemalawach/aleph-whitepaper/raw/master/aleph-whitepaper.pdf"
+            href="https://github.com/aleph-im/pyaleph"
             variant="primary btn-pill" size="lg">GitHub</b-button>
         </b-col>
       </b-row>

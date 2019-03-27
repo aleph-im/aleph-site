@@ -97,6 +97,8 @@ export default {
 
 <style lang="scss">
 @import 'assets/styles/variables.scss';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~bootstrap-vue/dist/bootstrap-vue.css';
 @import '~shards-ui/src/scss/shards.scss';
 @import 'assets/styles/site.scss';
 
