@@ -17,7 +17,7 @@
       </b-row>
     </b-container>
     <b-container class="roadmap" id="roadmap">
-        <b-row class="text-center">
+        <b-row class="text-center my-5">
             <div class="col-md-10 col-lg-8 mx-auto">
                 <h1>Development roadmap<br></h1>
                 <p class="lead">Ongoing work on Aleph network will be broken down in a few milestones...<br></p>
@@ -27,7 +27,8 @@
                   paginationActiveColor="#374992" paginationColor="#cbcbcb"
                   :paginationPadding="3.5" :paginationSize="7"
                   :navigationEnabled="true" navigationPrevLabel=" "
-                  navigationNextLabel=" " :navigationClickTargetSize="2">
+                  navigationNextLabel=" " :navigationClickTargetSize="2"
+                  class="my-5">
             <slide>
               <h4 class="text-center">
                 Q1 <i class="fa fa-check-circle text-primary"/>
@@ -142,5 +143,6 @@ $blueish-grey: #5A6169 !default;
   box-shadow: 0 .46875rem 1.1875rem rgba($blueish-grey, .2),
               0 .25rem .53125rem rgba($blueish-grey, .12),
               0 .125rem .1875rem rgba($blueish-grey, .1);
+  height: calc(100% - 2.75rem);
 }
 </style>

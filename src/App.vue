@@ -28,7 +28,7 @@
     <router-view></router-view>
     <footer>
       <b-container>
-        <b-row>
+        <b-row class="my-3">
           <b-col md="6" xl="8">
             <h4 class="my-auto mr-4 brand">
               <img src="./assets/logo.svg" alt="logo" style="margin-bottom: 0.2em;"><span class="ml-2 d-inline-block align-bottom">aleph</span>
