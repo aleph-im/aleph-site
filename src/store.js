@@ -8,7 +8,7 @@ const vuexLocal = new VuexPersistence({
   storage: window.localStorage
 })
 
-import bus from './bus.js'
+// import bus from './bus.js'
 
 export default new Vuex.Store({
   state: {
