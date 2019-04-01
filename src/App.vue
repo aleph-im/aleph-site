@@ -102,7 +102,7 @@ export default {
   computed: mapState({
     account: state => state.account,
     api_server: state => state.api_server,
-    chain_id: state => state.chain_id
+    network_id: state => state.network_id
   }),
   methods: {
     async login() {
@@ -119,7 +119,7 @@ export default {
       let prvbuffer = Buffer.from(private_key, 'hex')
       let pub = nuls.private_key_to_public_key(prvbuffer)
       let hash = nuls.public_key_to_hash(pub, {
-        chain_id: this.chain_id
+        chain_id: this.network_id
       })
       let address = nuls.address_from_hash(hash)
       // Vue.set(this, 'public_key', pub);
