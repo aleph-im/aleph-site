@@ -38,6 +38,7 @@ import { codemirror } from 'vue-codemirror'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/mode/gfm/gfm.js'
 // import 'codemirror/theme/cobalt.css'
+import { nuls, aggregates, broadcast } from 'aleph-js'
 
 
 export default {
@@ -91,14 +92,14 @@ export default {
       }
 
       let message = await aggregates.submit(
-        this.account.address, 'pages', values, {chain: 'NULS', api_server: this.api_server}
+        this.site_address, 'pages', values, {chain: 'NULS', api_server: this.api_server}
       )
       // this.$store.commit('sign_tx', {
       //   'tx': tx,
       //   'reason': 'Profile modification for ' + this.account.address
       // })
       nuls.sign(Buffer.from(this.account.private_key, 'hex'), message)
-      await create.broadcast(message, {api_server: this.api_server})
+      await broadcast(message, {api_server: this.api_server})
       this.processing = true
       function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
@@ -108,8 +109,8 @@ export default {
     },
     async save_close() {
       await this.save()
-
-      router.push({ name: "Page", params: {slug: this.slug} })
+      await this.$store.dispatch('update_pages')
+      this.$router.push({ name: "Page", params: {slug: this.slug} })
     }
   },
   watch: {

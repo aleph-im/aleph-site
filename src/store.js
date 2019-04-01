@@ -54,7 +54,7 @@ export default new Vuex.Store({
       })
       if (pages === null)
         pages = {}
-        
+
       await commit('set_pages', pages)
     }
   },

@@ -2,21 +2,23 @@
   <div>
     <b-button
       class="float-right mr-4"
+      v-if="this.site_address === this.account.address"
       :to="{name: 'PageEdit', params: {slug: slug}}">
       Edit
     </b-button>
     <p v-if="page === undefined" class="text-center my-4">
       ERROR 404, No page here.
     </p>
-    <div v-else>
-      {{page.content}}
-    </div>
+    <b-container v-else>
+      <markdown-it-vue class="md-body" :content="page.content"/>
+    </b-container>
   </div>
 </template>
 
 <script>
 import { Carousel, Slide } from 'vue-carousel'
 import { mapState } from 'vuex'
+import MarkdownItVue from './markdown-it-vue'
 export default {
   name: 'page',
   props: ['slug'],
@@ -26,7 +28,7 @@ export default {
     }
   },
   components: {
-    Carousel, Slide
+    Carousel, Slide, MarkdownItVue
   },
   computed: {
     page() {
