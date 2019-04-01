@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-container>
-      <b-tabs class="my-2">
+      <b-tabs class="my-2" lazy>
         <b-tab title="Write" active>
           <!-- <b-form-textarea id="textarea1"
                    v-model="content"
@@ -13,7 +13,7 @@
           </b-form-textarea> -->
           <codemirror v-model="content" :options="cmOptions"></codemirror>
         </b-tab>
-        <b-tab title="Preview">
+        <b-tab title="Preview" lazy>
           <markdown-it-vue class="md-body" :content="content"/>
         </b-tab>
       </b-tabs>
