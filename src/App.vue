@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="d-flex flex-column">
       <b-navbar toggleable="md" class="shadow bg-white" sticky>
         <b-container class="align-baseline">
           <b-navbar-brand>
@@ -25,8 +25,10 @@
           </b-collapse>
         </b-container>
       </b-navbar>
-    <router-view></router-view>
-    <footer>
+    <div id="content">
+      <router-view></router-view>
+    </div>
+    <footer id="sticky-footer">
       <b-container>
         <b-row class="my-3">
           <b-col md="6" xl="8">
@@ -54,8 +56,10 @@
         </b-row>
       </b-container>
       <div class="copyright">
-        <b-container>
+        <b-container class="d-flex justify-content-between">
           <p>Copyright ©2019 Aleph Project, all rights reserved.</p>
+          <p v-if="!account"><b-link @click="login" href="#">Login</b-link></p>
+          <p v-else>{{account.address}} <b-link @click="logout" href="#">Logout</b-link></p>
         </b-container>
       </div>
     </footer>
@@ -63,6 +67,9 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import { nuls } from 'aleph-js'
+
 export default {
   name: 'app',
   data () {
@@ -91,6 +98,44 @@ export default {
         }
       ]
     }
+  },
+  computed: mapState({
+    account: state => state.account,
+    api_server: state => state.api_server,
+    chain_id: state => state.chain_id
+  }),
+  methods: {
+    async login() {
+      let private_key = prompt("Please enter your private key:")
+      private_key = nuls.check_pkey(private_key)
+      if (!private_key) {
+        alert("Private key is invalid.")
+        return
+      }
+      await this.add_account(private_key)
+    },
+    async add_account(prv) {
+      let private_key = prv
+      let prvbuffer = Buffer.from(private_key, 'hex')
+      let pub = nuls.private_key_to_public_key(prvbuffer)
+      let hash = nuls.public_key_to_hash(pub, {
+        chain_id: this.chain_id
+      })
+      let address = nuls.address_from_hash(hash)
+      // Vue.set(this, 'public_key', pub);
+      let public_key = pub.toString('hex')
+      let address_hash = hash.toString('hex')
+      this.$store.commit('set_account', {
+        'name': address,
+        'private_key': private_key,
+        'public_key': public_key,
+        'address': address
+      })
+      //await this.fetch_profile(address)
+    },
+    async logout() {
+      this.$store.commit('set_account',  null);
+    },
   }
 }
 </script>
