@@ -95,6 +95,7 @@ export default {
       .use(MarkdownItContainer, 'lead')
       .use(MarkdownItContainer, 'text-center')
       .use(MarkdownItContainer, 'heading')
+      .use(MarkdownItContainer, 'container')
       .use(MarkdownItAttrs)
       .use(MarkdownItGithubToc, {
         tocFirstLevel: 2,
