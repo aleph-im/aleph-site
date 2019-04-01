@@ -222,4 +222,11 @@ $blueish-grey: #5A6169 !default;
               0 .125rem .1875rem rgba($blueish-grey, .1);
   height: calc(100% - 2.75rem);
 }
+
+.heading {
+  @media (min-width: 992px) {
+    margin: 0 20%;
+  }
+  text-align: center;
+}
 </style>
