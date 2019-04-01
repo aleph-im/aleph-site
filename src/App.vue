@@ -102,12 +102,79 @@ export default {
 @import '~shards-ui/src/scss/shards.scss';
 @import 'assets/styles/site.scss';
 
+html, body {
+  height: 100%;
+}
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+#content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
 }
 
 .navbar-brand img .logo {
   fill: #aaa;
+}
+
+$blueish-grey: #5A6169 !default;
+
+.VueCarousel-pagination {
+  z-index: 10;
+  margin-top: -2em;
+}
+
+.VueCarousel-navigation-button {
+  color: #374992 !important;
+}
+
+
+.VueCarousel-navigation-button:before {
+  border-color: #374992;
+  border-style: solid;
+  border-width: 3px 3px 0 0;
+  content: ' ';
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  transform: rotate(43deg);
+}
+
+.VueCarousel-navigation-prev:before {
+  transform: rotate(223deg);
+}
+
+
+.VueCarousel-navigation--disabled {
+  opacity: .3 !important;
+}
+
+.roadmap h4.card-title {
+  font-size: 1.2em;
+}
+
+.roadmap .VueCarousel {
+}
+
+.roadmap .VueCarousel-slide {
+  padding: 0 1em 2em 1em;
+}
+
+.roadmap .VueCarousel-wrapper {
+  overflow: hidden;
+}
+
+.roadmap .card {
+  box-shadow: 0 .46875rem 1.1875rem rgba($blueish-grey, .2),
+              0 .25rem .53125rem rgba($blueish-grey, .12),
+              0 .125rem .1875rem rgba($blueish-grey, .1);
+  height: calc(100% - 2.75rem);
 }
 </style>
