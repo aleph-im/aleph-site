@@ -217,9 +217,9 @@ $blueish-grey: #5A6169 !default;
 }
 
 .roadmap .card {
-  box-shadow: 0 .46875rem 1.1875rem rgba($blueish-grey, .2),
-              0 .25rem .53125rem rgba($blueish-grey, .12),
-              0 .125rem .1875rem rgba($blueish-grey, .1);
+  // box-shadow: 0 .46875rem 1.1875rem rgba($blueish-grey, .2),
+  //             0 .25rem .53125rem rgba($blueish-grey, .12),
+  //             0 .125rem .1875rem rgba($blueish-grey, .1);
   height: calc(100% - 2.75rem);
 }
 
