@@ -4,6 +4,7 @@
 
 <script>
 import MarkdownIt from 'markdown-it'
+import MarkdownItAttrs from 'markdown-it-attrs'
 import MarkdownItEmoji from 'markdown-it-emoji'
 import MarkdownItSubscript from 'markdown-it-sub'
 import MarkdownItSuperscript from 'markdown-it-sup'
@@ -23,7 +24,8 @@ import MarkdownItSourceMap from 'markdown-it-source-map'
 import MarkdownItEcharts from 'markdown-it-vue/src/markdown-it-plugin-echarts'
 import MarkdownItMermaid from 'markdown-it-vue/src/markdown-it-plugin-mermaid'
 import MarkdownItFlowchart from 'markdown-it-vue/src/markdown-it-plugin-flowchart'
-//import 'github-markdown-css'
+// import 'github-markdown-css'
+// import '../assets/styles/github-markdown.css'
 import 'markdown-it-latex/dist/index.css'
 import 'markdown-it-icons/dist/index.css'
 import 'markdown-it-highlight/dist/index.css'
@@ -91,6 +93,9 @@ export default {
       .use(MarkdownItContainer, 'warning')
       .use(MarkdownItContainer, 'danger')
       .use(MarkdownItContainer, 'lead')
+      .use(MarkdownItContainer, 'text-center')
+      .use(MarkdownItContainer, 'heading')
+      .use(MarkdownItAttrs)
       .use(MarkdownItGithubToc, {
         tocFirstLevel: 2,
         tocLastLevel: 3,
