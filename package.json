@@ -14,15 +14,22 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.0.0-beta.2",
     "bootstrap-vue": "latest",
+    "bs58": "^4.0.1",
+    "markdown-it-vue": "^1.0.6",
     "node-sass": "^4.11.0",
     "popper.js": "^1.12.9",
+    "ripemd160": "^2.0.2",
     "sass-loader": "^7.1.0",
+    "secp256k1": "^3.6.2",
+    "sha.js": "^2.4.11",
     "shards-ui": "^2.1.2",
     "shards-vue": "^1.0.7",
     "vue": "^2.5.2",
     "vue-carousel": "^0.18.0",
+    "vue-codemirror": "^4.0.6",
     "vue-router": "^3.0.1",
     "vuex": "^3.1.0",
     "vuex-persist": "^2.0.0"
