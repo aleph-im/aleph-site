@@ -8,10 +8,16 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    // {
+    //   path: '/',
+    //   name: 'Home',
+    //   component: Home
+    // },
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: Page,
+      props: {slug: 'home'}
     },
     {
       path: '/:slug/edit',
@@ -24,6 +30,7 @@ export default new Router({
       name: 'Page',
       component: Page,
       props: true
-    }
+    },
+
   ]
 })
