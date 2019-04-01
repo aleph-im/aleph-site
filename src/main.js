@@ -23,4 +23,11 @@ new Vue({
     account: state => state.account,
     api_server: state => state.api_server
   }),
+  async created() {
+    await this.$store.commit('set_network', {
+      network_id: 261,
+      api_server: 'https://apitest.aleph.im'
+    })
+    await this.$store.dispatch('update_pages')
+  }
 })
