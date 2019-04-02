@@ -23,7 +23,8 @@ export default new Vuex.Store({
     last_broadcast: null,
     categories: [ // categories are hard-coded for now...
     ],
-    pages: {}
+    pages: {},
+    menu: []
   },
   mutations: {
     set_account(state, account) {
@@ -31,6 +32,9 @@ export default new Vuex.Store({
     },
     set_pages(state, pages) { // TODO: handle per-page mutation
       state.pages = pages
+    },
+    set_menu(state, menu_items) { // TODO: handle per-page mutation
+      state.menu = menu_items
     },
     store_profile(state, payload) {
       state.profiles[payload.address] = payload.profile
@@ -47,7 +51,6 @@ export default new Vuex.Store({
   },
   actions: {
     async update_pages({ state, commit }) {
-      console.log(state.api_server)
       let pages = await aggregates.fetch(
         state.site_address, 'pages', {
         'api_server': state.api_server
@@ -56,6 +59,17 @@ export default new Vuex.Store({
         pages = {}
 
       await commit('set_pages', pages)
+    },
+    async update_menu({ state, commit }) {
+      let menu_obj = await aggregates.fetch(
+        state.site_address, 'menu', {
+        'api_server': state.api_server
+      })
+      let items = []
+      if ((menu_obj !== null) && menu_obj.items)
+        items = menu_obj.items
+
+      await commit('set_menu', items)
     }
   },
   plugins: [vuexLocal.plugin]
