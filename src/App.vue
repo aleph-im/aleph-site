@@ -4,7 +4,9 @@
         <b-container class="align-baseline">
           <b-navbar-brand>
               <h4 class="my-auto mr-4">
-                <img src="./assets/logo.svg" alt="logo" style="margin-bottom: 0.2em;"><span class="ml-2 d-inline-block align-bottom">aleph</span>
+                <b-link :to="{}">
+                  <img src="./assets/logo.svg" alt="logo" style="margin-bottom: 0.2em;"><span class="ml-2 d-inline-block align-bottom">aleph</span>
+                </b-link>
               </h4>
           </b-navbar-brand>
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -167,6 +169,10 @@ html, body {
 
 .navbar-brand img .logo {
   fill: #aaa;
+}
+
+.navbar-brand a {
+  color: inherit;
 }
 
 $blueish-grey: #5A6169 !default;
