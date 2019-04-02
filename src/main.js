@@ -29,5 +29,6 @@ new Vue({
       api_server: 'https://apitest.aleph.im'
     })
     await this.$store.dispatch('update_pages')
+    await this.$store.dispatch('update_menu')
   }
 })
