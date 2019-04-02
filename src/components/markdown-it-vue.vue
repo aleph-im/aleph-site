@@ -21,7 +21,7 @@ import MarkdownItLatex from 'markdown-it-latex'
 import MarkdownItContainer from 'markdown-it-container'
 import MarkdownItGithubToc from 'markdown-it-github-toc'
 import MarkdownItSourceMap from 'markdown-it-source-map'
-import MarkdownItEcharts from 'markdown-it-vue/src/markdown-it-plugin-echarts'
+// import MarkdownItEcharts from 'markdown-it-vue/src/markdown-it-plugin-echarts'
 import MarkdownItMermaid from 'markdown-it-vue/src/markdown-it-plugin-mermaid'
 import MarkdownItFlowchart from 'markdown-it-vue/src/markdown-it-plugin-flowchart'
 // import 'github-markdown-css'
@@ -29,7 +29,7 @@ import MarkdownItFlowchart from 'markdown-it-vue/src/markdown-it-plugin-flowchar
 import 'markdown-it-latex/dist/index.css'
 import 'markdown-it-icons/dist/index.css'
 import 'markdown-it-highlight/dist/index.css'
-import echarts from 'echarts'
+// import echarts from 'echarts'
 import mermaid from 'mermaid'
 import flowchart from 'flowchart.js'
 export default {
@@ -46,15 +46,15 @@ export default {
         this.$nextTick(() => {
           this.$refs['markdown-it-vue-container'].innerHTML = this.md.render(val)
           // render echarts
-          document.querySelectorAll('.md-echarts').forEach(element => {
-            try {
-              let options = JSON.parse(element.textContent)
-              let chart = echarts.init(element)
-              chart.setOption(options)
-            } catch (e) {
-              element.outerHTML = `<pre>echarts complains: ${e}</pre>`
-            }
-          })
+          // document.querySelectorAll('.md-echarts').forEach(element => {
+          //   try {
+          //     let options = JSON.parse(element.textContent)
+          //     let chart = echarts.init(element)
+          //     chart.setOption(options)
+          //   } catch (e) {
+          //     element.outerHTML = `<pre>echarts complains: ${e}</pre>`
+          //   }
+          // })
           // render mermaid
           mermaid.init(undefined, document.querySelectorAll('.mermaid'))
           // render flowchart
@@ -108,7 +108,7 @@ export default {
       })
       .use(MarkdownItSourceMap)
       .use(MarkdownItMermaid)
-      .use(MarkdownItEcharts)
+      // .use(MarkdownItEcharts)
       .use(MarkdownItFlowchart)
     return {
       md: md
