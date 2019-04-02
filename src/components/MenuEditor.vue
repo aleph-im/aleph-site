@@ -15,18 +15,25 @@
         </div>
       </b-col>
     </b-row>
+    <div class="clearfix float-right">
+      <b-button variant="success" @click="save" :disabled="processing">
+        {{processing ? 'Please wait...' : 'Save'}}
+      </b-button>
+    </div>
   </b-container>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import nestedMenuEditor from './nested-menu-editor'
+import { nuls, aggregates, broadcast } from 'aleph-js'
 
 export default {
   name: 'menu-editor',
   data () {
     return {
-      working_menu: []
+      working_menu: [],
+      processing: false
     }
   },
   components: {
@@ -36,10 +43,32 @@ export default {
     async refresh() {
       await this.$store.dispatch('update_pages') // perhaps only this page?
       await this.$store.dispatch('update_menu')
+      this.working_menu = this.menu
     },
     add(slug) {
-      console.log(slug)
       this.working_menu.push({'slug': slug, 'items': []})
+    },
+    async save() {
+      let values = {
+        items: this.working_menu
+      }
+
+      let message = await aggregates.submit(
+        this.site_address, 'menu', values, {chain: 'NULS', api_server: this.api_server}
+      )
+      // this.$store.commit('sign_tx', {
+      //   'tx': tx,
+      //   'reason': 'Profile modification for ' + this.account.address
+      // })
+      nuls.sign(Buffer.from(this.account.private_key, 'hex'), message)
+      await broadcast(message, {api_server: this.api_server})
+      this.processing = true
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+      await sleep(200)
+      await this.refresh()
+      this.processing = false
     }
   },
   computed: {
@@ -72,7 +101,6 @@ export default {
   },
   async created() {
     await this.refresh()
-    this.working_menu = this.menu
   }
 }
 </script>

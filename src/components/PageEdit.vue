@@ -104,7 +104,7 @@ export default {
       function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
       }
-      await sleep(100)
+      await sleep(200)
       this.processing = false
     },
     async save_close() {
