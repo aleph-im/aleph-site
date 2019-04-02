@@ -8,10 +8,6 @@ h1 {
   font-weight: 600;
 }
 
-body {
-  background: url('assets/bg.svg') no-repeat center -100px;
-}
-
 .card-body ul {
   padding-left: 1em;
   padding-top: 1em;
@@ -55,4 +51,10 @@ footer {
       font-size: 80%;
     }
   }
+}
+
+
+.CodeMirror {
+  border: 1px solid #eee;
+  height: auto;
 }

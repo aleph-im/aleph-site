@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { Carousel, Slide } from 'vue-carousel'
+// import { Carousel, Slide } from 'vue-carousel'
 import { mapState } from 'vuex'
 import MarkdownItVue from './markdown-it-vue'
 export default {
@@ -28,7 +28,8 @@ export default {
     }
   },
   components: {
-    Carousel, Slide, MarkdownItVue
+    // Carousel, Slide,
+    MarkdownItVue
   },
   computed: {
     page() {

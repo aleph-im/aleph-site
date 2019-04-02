@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { Carousel, Slide } from 'vue-carousel'
+// import { Carousel, Slide } from 'vue-carousel'
 import { mapState } from 'vuex'
 import MarkdownItVue from './markdown-it-vue'
 
@@ -60,7 +60,8 @@ export default {
     }
   },
   components: {
-    Carousel, Slide, MarkdownItVue, codemirror
+    // Carousel, Slide,
+    MarkdownItVue, codemirror
   },
   computed: {
     page() {
@@ -125,11 +126,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss">
+<style>
 
-
-.CodeMirror {
-  border: 1px solid #eee;
-  height: auto;
-}
 </style>

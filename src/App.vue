@@ -170,6 +170,10 @@ html, body {
   height: 100%;
 }
 
+body {
+  background: url('assets/bg.svg') no-repeat center -100px;
+}
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
