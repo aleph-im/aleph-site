@@ -4,23 +4,34 @@
         <b-container class="align-baseline">
           <b-navbar-brand>
               <h4 class="my-auto mr-4">
-                <b-link :to="{}">
+                <b-link :to="{name: 'Home'}">
                   <img src="./assets/logo.svg" alt="logo" style="margin-bottom: 0.2em;"><span class="ml-2 d-inline-block align-bottom">aleph</span>
                 </b-link>
               </h4>
           </b-navbar-brand>
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
           <b-collapse is-nav id="nav-collapse">
             <b-navbar-nav class="ml-auto">
-              <template v-for="mitem in menuItems">
-                <div v-if="mitem.type === 'button'" class="nav-item mx-md-4">
+              <template v-for="(mitem, idx) in menuItems" >
+                <div v-if="mitem.type === 'button'" class="nav-item mx-md-4" :key="menu.length + idx">
                   <a class="btn btn-secondary btn-pill d-block" :href="mitem.link">
                     {{mitem.text}}
                   </a>
                 </div>
-                <b-nav-item :href="mitem.link" class="align-middle d-block mx-md-2" v-else>
+                <b-nav-item :href="mitem.link" class="align-middle d-block mx-md-2" v-else-if="mitem.link" :key="menu.length + idx">
                   {{mitem.text}}
+                </b-nav-item>
+                <b-nav-item-dropdown :to="{name: 'Page', params: {slug: mitem.slug}}" :key="menu.length + idx"
+                            :text="mitem.text||mitem.slug"
+                            class="align-middle d-block mx-md-2" v-else-if="mitem.items && mitem.items.length">
+                  <b-dropdown-item v-for="(sitem, idx2) of mitem.items" :key="idx+idx2"
+                                   :to="{name: 'Page', params: {slug: sitem.slug}}">
+                      {{sitem.text||sitem.slug}}
+                  </b-dropdown-item>
+                </b-nav-item-dropdown>
+                <b-nav-item :to="{name: 'Page', params: {slug: mitem.slug}}" :key="menu.length + idx"
+                            class="align-middle d-block mx-md-2" v-else-if="mitem.slug">
+                  {{mitem.text||mitem.slug}}
                 </b-nav-item>
               </template>
             </b-navbar-nav>
@@ -77,7 +88,7 @@ export default {
   data () {
     return {
       logo: require('./assets/logo.svg'),
-      menuItems: [
+      fixedMenuItems: [
         {
           type: 'text',
           text: 'Github',
@@ -101,11 +112,17 @@ export default {
       ]
     }
   },
-  computed: mapState({
-    account: state => state.account,
-    api_server: state => state.api_server,
-    network_id: state => state.network_id
-  }),
+  computed: {
+    menuItems() {
+      return this.menu.concat(this.fixedMenuItems)
+    },
+    ...mapState({
+      account: state => state.account,
+      api_server: state => state.api_server,
+      network_id: state => state.network_id,
+      menu: state => state.menu
+    })
+  },
   methods: {
     async login() {
       let private_key = prompt("Please enter your private key:")
