@@ -76,7 +76,7 @@
 </template>
 
 <script>
-import { Carousel, Slide } from 'vue-carousel'
+// import { Carousel, Slide } from 'vue-carousel'
 export default {
   name: 'hello',
   data () {

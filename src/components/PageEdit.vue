@@ -126,6 +126,11 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style lang="scss">
 
+
+.CodeMirror {
+  border: 1px solid #eee;
+  height: auto;
+}
 </style>

@@ -256,4 +256,9 @@ $blueish-grey: #5A6169 !default;
   }
   text-align: center;
 }
+
+.CodeMirror {
+  border: 1px solid #eee;
+  height: auto;
+}
 </style>
