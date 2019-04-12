@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="d-flex flex-column">
-      <b-navbar toggleable="md" class="shadow bg-white" sticky>
+      <b-navbar toggleable="md" class="shadow bg-white" id="appnav" sticky>
         <b-container class="align-baseline">
           <b-navbar-brand>
               <h4 class="my-auto mr-4">

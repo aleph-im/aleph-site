@@ -8,6 +8,11 @@ h1 {
   font-weight: 600;
 }
 
+#appnav {
+  min-height: 0;
+  flex-shrink: 0;
+}
+
 .card-body ul {
   padding-left: 1em;
   padding-top: 1em;
