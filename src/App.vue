@@ -81,7 +81,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import { nuls } from 'aleph-js'
+import * as nuls from 'aleph-js/src/api/nuls.js'
 
 export default {
   name: 'app',

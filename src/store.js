@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 import VuexPersistence from 'vuex-persist'
-import {aggregates} from 'aleph-js'
+import {fetch} from 'aleph-js/src/api/aggregates.js'
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage
@@ -51,7 +51,7 @@ export default new Vuex.Store({
   },
   actions: {
     async update_pages({ state, commit }) {
-      let pages = await aggregates.fetch(
+      let pages = await fetch(
         state.site_address, 'pages', {
         'api_server': state.api_server
       })
@@ -61,7 +61,7 @@ export default new Vuex.Store({
       await commit('set_pages', pages)
     },
     async update_menu({ state, commit }) {
-      let menu_obj = await aggregates.fetch(
+      let menu_obj = await fetch(
         state.site_address, 'menu', {
         'api_server': state.api_server
       })
