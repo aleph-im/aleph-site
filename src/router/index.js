@@ -2,8 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 // import Home from '@/components/Home'
 import Page from '@/components/Page'
-import PageEdit from '@/components/PageEdit'
-import MenuEditor from '@/components/MenuEditor'
+// import PageEdit from '@/components/PageEdit'
+// import MenuEditor from '@/components/MenuEditor'
 
 Vue.use(Router)
 
@@ -23,13 +23,13 @@ export default new Router({
     {
       path: '/edit-menu',
       name: 'MenuEditor',
-      component: MenuEditor,
+      component: () => import(/* webpackChunkName: "menueditor" */ '@/components/MenuEditor'),
       props: true
     },
     {
       path: '/:slug/edit',
       name: 'PageEdit',
-      component: PageEdit,
+      component: () => import(/* webpackChunkName: "pageeditor" */ '@/components/PageEdit'),
       props: true
     },
     {
