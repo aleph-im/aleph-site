@@ -58,12 +58,21 @@
               <li>
                 <a href="https://github.com/moshemalawach/aleph-whitepaper/raw/master/aleph-whitepaper.pdf">Whitepaper</a>
               </li>
+              <li>
+                <a href="https://explorer.aleph.im">Test-net Explorer</a>
+              </li>
             </ul>
           </b-col>
           <b-col md="3" xl="2">
             <h6>Social</h6>
             <a href="https://t.me/alephim">
               <i class="fab fa-telegram-plane" />
+            </a>&nbsp;<a href="https://www.reddit.com/r/Aleph_im/">
+              <i class="fab fa-reddit" />
+            </a>&nbsp;<a href="https://twitter.com/aleph_im">
+              <i class="fab fa-twitter" />
+            </a>&nbsp;<a href="https://medium.com/aleph-im">
+              <i class="fab fa-medium" />
             </a>
           </b-col>
         </b-row>
