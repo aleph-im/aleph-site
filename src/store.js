@@ -13,7 +13,7 @@ const vuexLocal = new VuexPersistence({
 
 export default new Vuex.Store({
   state: {
-    api_server: 'https://apitest.aleph.im',
+    api_server: 'https://api2.aleph.im',
     site_chain: 'NULS',
     site_address: 'TTatYAULiEfV6e7Tqt9z8YCr7dz2KkbJ',
     network_id: 261,

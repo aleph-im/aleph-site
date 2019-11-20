@@ -27,7 +27,7 @@ new Vue({
   async created() {
     await this.$store.commit('set_network', {
       network_id: 261,
-      api_server: 'https://apitest.aleph.im'
+      api_server: 'https://api2.aleph.im'
     })
     await this.$store.dispatch('update_pages')
     await this.$store.dispatch('update_menu')

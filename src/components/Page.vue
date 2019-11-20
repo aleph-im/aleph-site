@@ -7,7 +7,7 @@
       Edit
     </b-button>
     <p v-if="page === undefined" class="text-center my-4">
-      ERROR 404, No page here.
+      Page loading.
     </p>
     <b-container v-else>
       <markdown-it-vue class="md-body" :content="page.content"/>
