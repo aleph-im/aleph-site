@@ -101,7 +101,7 @@ export default {
         {
           type: 'text',
           text: 'Github',
-          link: 'https://github.com/aleph-im/pyaleph'
+          link: 'https://github.com/aleph-im'
         },
         // {
         //   type: 'text',
