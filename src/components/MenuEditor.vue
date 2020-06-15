@@ -26,9 +26,7 @@
 <script>
 import { mapState } from 'vuex'
 import nestedMenuEditor from './nested-menu-editor'
-import * as nuls from 'aleph-js/src/api/nuls.js'
-import * as aggregates from 'aleph-js/src/api/aggregates.js'
-import { broadcast } from 'aleph-js/src/api/create.js'
+import { aggregates } from 'aleph-js'
 
 export default {
   name: 'menu-editor',
@@ -55,19 +53,13 @@ export default {
         items: this.working_menu
       }
 
+      this.processing = true
       let message = await aggregates.submit(
         this.site_address, 'menu', values, {
-          chain: 'NULS', api_server: this.api_server,
-          channel: 'FOUNDATION'
+          api_server: this.api_server,
+          channel: 'FOUNDATION', account: this.account
         }
       )
-      // this.$store.commit('sign_tx', {
-      //   'tx': tx,
-      //   'reason': 'Profile modification for ' + this.account.address
-      // })
-      nuls.sign(Buffer.from(this.account.private_key, 'hex'), message)
-      await broadcast(message, {api_server: this.api_server})
-      this.processing = true
       function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
       }
@@ -102,6 +94,7 @@ export default {
       menu: state => state.menu,
       site_address: state => state.site_address,
       account: state => state.account,
+      channel: state => state.channel
     })
   },
   async created() {

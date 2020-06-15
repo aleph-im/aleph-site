@@ -12,6 +12,7 @@ const vuexLocal = new VuexPersistence({
     let storage = {}
     if (content.account !== null) {
       if (content.account.source === 'integrated') {
+        content.account.signer = null
         storage.account = content.account
       }
     }
@@ -23,10 +24,11 @@ const vuexLocal = new VuexPersistence({
 export default new Vuex.Store({
   state: {
     api_server: 'https://api2.aleph.im',
-    site_chain: 'NULS',
-    site_address: 'TTatYAULiEfV6e7Tqt9z8YCr7dz2KkbJ',
+    site_chain: 'ETH',
+    site_address: '0x6D93054C54c6A24d13e01BCd4aebfedc5cD1Dae7',
     network_id: 261,
     ipfs_gateway: 'https://ipfs.io/ipfs/',
+    channel: 'FOUNDATION',
     account: null,
     profiles: {},
     last_broadcast: null,

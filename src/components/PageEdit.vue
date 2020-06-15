@@ -76,6 +76,7 @@ export default {
       site_address: state => state.site_address,
       account: state => state.account,
       api_server: state => state.api_server,
+      channel: state => state.channel
     })
   },
   methods: {
@@ -91,20 +92,19 @@ export default {
       values[this.slug] = {
         content: this.content
       }
-
+      console.log(this.account)
+      this.processing = true
       let message = await aggregates.submit(
         this.site_address, 'pages', values, {
-          chain: 'NULS', api_server: this.api_server,
-          channel: 'FOUNDATION', inline: false
-        }
+          api_server: this.api_server,
+          channel: 'FOUNDATION',
+          account: this.account }
       )
+      console.log(message)
       // this.$store.commit('sign_tx', {
       //   'tx': tx,
       //   'reason': 'Profile modification for ' + this.account.address
       // })
-      nuls.sign(Buffer.from(this.account.private_key, 'hex'), message)
-      await broadcast(message, {api_server: this.api_server})
-      this.processing = true
       function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
       }
