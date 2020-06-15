@@ -95,7 +95,10 @@ export default {
       }
 
       let message = await aggregates.submit(
-        this.site_address, 'pages', values, {chain: 'NULS', api_server: this.api_server}
+        this.site_address, 'pages', values, {
+          chain: 'NULS', api_server: this.api_server,
+          channel: 'FOUNDATION', inline: false
+        }
       )
       // this.$store.commit('sign_tx', {
       //   'tx': tx,
