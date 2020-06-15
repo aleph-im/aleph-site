@@ -5,7 +5,7 @@
           <b-navbar-brand>
               <h4 class="my-auto mr-4">
                 <b-link :to="{name: 'Home'}">
-                  <img src="./assets/logo.svg" alt="logo" style="margin-bottom: 0.2em;"><span class="ml-2 d-inline-block align-bottom">aleph</span>
+                  <img src="./assets/logo.svg" alt="logo" style="margin-bottom: 0.2em;"><span class="ml-2 d-inline-block align-bottom">aleph.im</span>
                 </b-link>
               </h4>
           </b-navbar-brand>
@@ -53,13 +53,13 @@
             <h6 class="mt-2 mt-md-0">Resources</h6>
             <ul>
               <li>
-                <a href="https://github.com/aleph-im/pyaleph">Github</a>
+                <a href="https://github.com/aleph-im">Github</a>
               </li>
               <li>
                 <a href="https://github.com/moshemalawach/aleph-whitepaper/raw/master/aleph-whitepaper.pdf">Whitepaper</a>
               </li>
               <li>
-                <a href="https://explorer.aleph.im">Test-net Explorer</a>
+                <a href="https://explorer.aleph.im">Network Explorer</a>
               </li>
             </ul>
           </b-col>
@@ -79,7 +79,7 @@
       </b-container>
       <div class="copyright">
         <b-container class="d-flex justify-content-between">
-          <p>Copyright ©2019 Aleph Project, all rights reserved.</p>
+          <p>Copyright ©2019-2020 Aleph Project, all rights reserved.</p>
           <p v-if="!account"><b-link @click="login" href="#">Login</b-link></p>
           <p v-else>{{account.address}} <b-link @click="logout" href="#">Logout</b-link></p>
         </b-container>
