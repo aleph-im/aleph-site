@@ -3,12 +3,21 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 import VuexPersistence from 'vuex-persist'
+
 import {fetch_one} from 'aleph-js/src/api/aggregates.js'
 
 const vuexLocal = new VuexPersistence({
-  storage: window.localStorage
+  storage: window.localStorage,
+  reducer: (content) => {
+    let storage = {}
+    if (content.account !== null) {
+      if (content.account.source === 'integrated') {
+        storage.account = content.account
+      }
+    }
+    return storage
+  }
 })
-
 // import bus from './bus.js'
 
 export default new Vuex.Store({

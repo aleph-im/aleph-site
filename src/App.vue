@@ -90,7 +90,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import * as nuls from 'aleph-js/src/api/nuls.js'
+import {ethereum} from 'aleph-js'
 
 export default {
   name: 'app',
@@ -134,32 +134,15 @@ export default {
   },
   methods: {
     async login() {
-      let private_key = prompt("Please enter your private key:")
-      private_key = nuls.check_pkey(private_key)
-      if (!private_key) {
-        alert("Private key is invalid.")
-        return
-      }
-      await this.add_account(private_key)
-    },
-    async add_account(prv) {
-      let private_key = prv
-      let prvbuffer = Buffer.from(private_key, 'hex')
-      let pub = nuls.private_key_to_public_key(prvbuffer)
-      let hash = nuls.public_key_to_hash(pub, {
-        chain_id: this.network_id
-      })
-      let address = nuls.address_from_hash(hash)
-      // Vue.set(this, 'public_key', pub);
-      let public_key = pub.toString('hex')
-      let address_hash = hash.toString('hex')
-      this.$store.commit('set_account', {
-        'name': address,
-        'private_key': private_key,
-        'public_key': public_key,
-        'address': address
-      })
-      //await this.fetch_profile(address)
+      let private_key = prompt("Please enter your mnemonics:")
+      let account = await ethereum.import_account({mnemonics: private_key})
+      // private_key = nuls.check_pkey(private_key)
+      // if (!private_key) {
+      //   alert("Private key is invalid.")
+      //   return
+      // }
+      if (account)
+        await this.$store.commit('set_account', account)
     },
     async logout() {
       this.$store.commit('set_account',  null);

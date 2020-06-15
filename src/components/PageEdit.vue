@@ -38,9 +38,7 @@ import { codemirror } from 'vue-codemirror'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/mode/gfm/gfm.js'
 // import 'codemirror/theme/cobalt.css'
-import * as nuls from 'aleph-js/src/api/nuls.js'
-import * as aggregates from 'aleph-js/src/api/aggregates.js'
-import { broadcast } from 'aleph-js/src/api/create.js'
+import { aggregates } from 'aleph-js'
 
 
 export default {
