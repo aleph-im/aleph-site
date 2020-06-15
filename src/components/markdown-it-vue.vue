@@ -5,7 +5,7 @@
 <script>
 import MarkdownIt from 'markdown-it'
 import MarkdownItAttrs from 'markdown-it-attrs'
-import MarkdownItEmoji from 'markdown-it-emoji'
+import MarkdownItEmoji from 'markdown-it-emoji/light'
 import MarkdownItSubscript from 'markdown-it-sub'
 import MarkdownItSuperscript from 'markdown-it-sup'
 import MarkdownItFootnote from 'markdown-it-footnote'
@@ -15,7 +15,7 @@ import MarkdownItInsert from 'markdown-it-ins'
 import MarkdownItMark from 'markdown-it-mark'
 import MarkdownItKatex from 'markdown-it-katex'
 import MarkdownItTasklists from 'markdown-it-task-lists'
-import MarkdownItIcons from 'markdown-it-icons'
+// import MarkdownItIcons from 'markdown-it-icons'
 import MarkdownItHighlight from 'markdown-it-highlight'
 import MarkdownItLatex from 'markdown-it-latex'
 import MarkdownItContainer from 'markdown-it-container'
@@ -27,7 +27,7 @@ import MarkdownItFlowchart from 'markdown-it-vue/src/markdown-it-plugin-flowchar
 // import 'github-markdown-css'
 // import '../assets/styles/github-markdown.css'
 import 'markdown-it-latex/dist/index.css'
-import 'markdown-it-icons/dist/index.css'
+//import 'markdown-it-icons/dist/index.css'
 import 'markdown-it-highlight/dist/index.css'
 // import echarts from 'echarts'
 import mermaid from 'mermaid'
@@ -58,16 +58,16 @@ export default {
           // render mermaid
           mermaid.init(undefined, document.querySelectorAll('.mermaid'))
           // render flowchart
-          document.querySelectorAll('.md-flowchart').forEach(element => {
-            try {
-              let code = element.textContent
-              let chart = flowchart.parse(code)
-              element.textContent = ''
-              chart.drawSVG(element)
-            } catch (e) {
-              element.outerHTML = `<pre>flowchart complains: ${e}</pre>`
-            }
-          })
+          // document.querySelectorAll('.md-flowchart').forEach(element => {
+          //   try {
+          //     let code = element.textContent
+          //     let chart = flowchart.parse(code)
+          //     element.textContent = ''
+          //     chart.drawSVG(element)
+          //   } catch (e) {
+          //     element.outerHTML = `<pre>flowchart complains: ${e}</pre>`
+          //   }
+          // })
         })
       }
     }
@@ -85,7 +85,7 @@ export default {
       .use(MarkdownItMark)
       .use(MarkdownItKatex, {throwOnError: false, errorColor: '#cc0000'})
       .use(MarkdownItTasklists, {enabled: this.taskLists})
-      .use(MarkdownItIcons, 'font-awesome')
+      //.use(MarkdownItIcons, 'font-awesome')
       .use(MarkdownItHighlight)
       .use(MarkdownItLatex)
       .use(MarkdownItContainer, 'success')
@@ -109,7 +109,7 @@ export default {
       .use(MarkdownItSourceMap)
       .use(MarkdownItMermaid)
       // .use(MarkdownItEcharts)
-      .use(MarkdownItFlowchart)
+      //.use(MarkdownItFlowchart)
     return {
       md: md
     }
