@@ -1,0 +1,119 @@
+// Hero - Style 3 - Variation 1
+
+.shards-hero-s3--1 {
+
+  // Media
+  .image-wrapper {
+    position: relative;
+
+    .mobile-placeholder {
+      z-index: 1;
+    }
+
+    &__blob-bg,
+    &__sphere-teal,
+    &__sphere-yellow,
+    &__sphere-violet {
+      position: absolute;
+    }
+
+    // Background blob
+    &__blob-bg {
+      top: 0;
+      z-index: -1;
+      width: 100%;
+    }
+
+    // Teal Sphere
+    &__sphere-teal {
+      top: 10%;
+      left: 55px;
+    }
+
+    // Violet Sphere
+    &__sphere-violet {
+      bottom: 15px;
+      right: 15px;
+      z-index: -1;
+    }
+
+    // Yellow Sphere
+    &__sphere-yellow {
+      bottom: 40px;
+      left: -15px;
+    }
+  }
+
+  // Background Elements
+  .shards-hero {
+
+    &__bg-semi-blue,
+    &__bg-semi-pink,
+    &__bg-semi-yellow {
+      position: absolute;
+    }
+
+    &__bg-semi-blue {
+      bottom: 0;
+      left: 0;
+    }
+
+    &__bg-semi-pink {
+      right: 10%;
+      bottom: 10%;
+    }
+
+    &__bg-semi-yellow {
+      top: 10%;
+      right: 0;
+    }
+  }
+
+  // Responsive
+  @include media-breakpoint-down(lg) {
+    .image-wrapper {
+
+      // Teal Sphere
+      &__sphere-teal {
+        left: 0;
+      }
+
+      // Violet Sphere
+      &__sphere-violet {
+        right: -10px;
+        bottom: 40px;
+      }
+
+      // Yellow Sphere
+      &__sphere-yellow {
+        bottom: 90px;
+        left: -10px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .content-wrapper {
+
+      form input,
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .shards-hero {
+
+      &__bg-semi-blue,
+      &__bg-semi-pink,
+      &__bg-semi-yellow {
+        display: none;
+      }
+    }
+
+    .content-wrapper {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+// Hero - Style 4 - Variation 4
+
+.shards-hero-s4--4 {
+  overflow: hidden;
+
+  .image-wrapper {
+    position: relative;
+
+    &__background {
+      position: absolute;
+      top: -100px;
+      right: -160px;
+      z-index: -1;
+      max-width: 750px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .content-wrapper {
+      text-align: center;
+
+      form {
+        display: table;
+        margin: 0 auto;
+      }
+    }
+
+    .image-wrapper {
+      &__background {
+        max-width: 750px;
+        left: 60%;
+        transform: translate(-50%);
+      }
+
+      .browser-placeholder {
+        width: 100% !important;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .content-wrapper form {
+
+      input,
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

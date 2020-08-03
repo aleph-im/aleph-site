@@ -1,0 +1,61 @@
+@mixin shards-overlay($opacity: false) {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @if $opacity {
+      opacity: $opacity;
+    }
+  }
+}
+
+.shards-overlay {
+  @include shards-overlay;
+
+  @each $color,
+  $value in $theme-colors {
+    &--#{$color} {
+      &:before {
+        background: $value;
+        opacity: $overlay-opacity;
+      }
+    }
+  }
+
+  @each $color,
+  $value in $new-colors {
+    &--#{$color} {
+      &:before {
+        background: $value;
+        opacity: $overlay-opacity;
+      }
+    }
+  }
+
+  &--black {
+    &:before {
+      background: $black;
+      opacity: $overlay-opacity;
+    }
+  }
+
+  &--white {
+    &:before {
+      background: $white;
+      opacity: $overlay-opacity;
+    }
+  }
+
+  // Overlay opacity helpers
+  @for $value from 0 through 10 {
+    &--opacity-#{$value}:before {
+      opacity: $value / 10;
+    }
+  }
+}

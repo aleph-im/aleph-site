@@ -1,0 +1,15 @@
+// Background utilities
+
+@each $color, $value in map-merge($theme-colors, $new-colors) {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}
+
+.bg-black {
+  background: $black;
+}
+
+.bg-white {
+  background: $white;
+}

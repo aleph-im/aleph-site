@@ -1,0 +1,16 @@
+//
+// Features - Variation 10
+//
+
+
+.shards-features--10 {
+  .image-placeholder {
+    min-height: 400px;
+    max-width: 600px;
+
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+// Navbars
+
+.navbar {
+  &.shards-navbar {
+    display: flex;
+    flex-direction: row;
+    width: $navbar-width;
+    transition: $navbar-transition;
+
+    // Sticky
+    &--sticky.persistent {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    // Sticky - Light
+    &--sticky.persistent.navbar-light {
+      background-color: $navbar-sticky-light-background-color;
+    }
+
+    // Sticky - Dark
+    &--sticky.persistent.navbar-dark {
+      background-color: $navbar-sticky-dark-background-color;
+    }
+
+    // Slide (In)
+    &--slide {
+      transform: $navbar-slide-transform;
+    }
+
+    // Show the navbar header.
+    &--slide.shards-navbar--slide-visible {
+      transform: $navbar-slide-visible-transform;
+    }
+  }
+
+  // Sidebar Toggler
+  .sidebar-toggler {
+    border-radius: $sidebar-toggler-border-radius;
+
+    .navbar-toggler-icon {
+      width: $sidebar-toggler-icon-width;
+      height: $sidebar-toggler-icon-height;
+    }
+  }
+
+  // Navbar Brand
+  .navbar-brand {
+    font-size: $navbar-brand-font-size;
+
+    &__image,
+    &__text {
+      display: inline-block;
+    }
+
+    &__image {
+      max-height: $navbar-brand-image-max-height;
+    }
+
+    &__text {
+      position: relative;
+      padding: $navbar-brand-text-padding-y $navbar-brand-text-padding-x;
+      margin: $navbar-brand-text-margin;
+      font-weight: $navbar-brand-text-font-weight;
+      font-family: $navbar-brand-text-font-family;
+    }
+  }
+
+  // Positioning Navbar content
+  .navbar__content {
+
+    &-left,
+    &-center,
+    &-right {
+      flex: 1;
+      display: flex;
+      min-width: -webkit-min-content;
+    }
+
+    &-left {
+      justify-content: flex-start;
+    }
+
+    &-right {
+      justify-content: flex-end;
+    }
+  }
+
+  // Social Icons
+  .navbar-social {
+    &--large i {
+      top: $navbar-social-large-icon-top !important;
+      font-size: $navbar-social-large-icon-font-size;
+    }
+
+    i {
+      position: relative;
+      top: $navbar-social-icon-top;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &.shards-navbar {
+      &.shards-navbar--responsive {
+        .navbar__content {
+          display: block !important;
+
+          &-left,
+          &-center,
+          &-right {
+            flex: none;
+            display: block !important;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

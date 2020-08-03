@@ -1,0 +1,37 @@
+// Hero - Style 5 - Variation 3
+
+.shards-hero-s5--3 {
+  position: relative;
+
+  .shards-hero {
+    &__content {
+      form input {
+        background: rgba(255, 255, 255, .2);
+        color: $white;
+
+        &::placeholder {
+          color: $white;
+        }
+      }
+    }
+
+    &__content-form {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .shards-hero {
+      &__content-form {
+        position: static;
+      }
+
+      &__content {
+        text-align: center;
+      }
+    }
+  }
+}

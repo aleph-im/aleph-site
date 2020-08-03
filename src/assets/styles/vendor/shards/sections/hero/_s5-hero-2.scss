@@ -1,0 +1,19 @@
+// Hero - Style 5 - Variation 2
+
+.shards-hero-s5--2 {
+  .image-wrapper {
+    &__phone-mockup {
+      max-width: 330px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .content-wrapper {
+      text-align: center;
+
+      >div {
+        width: 100%;
+      }
+    }
+  }
+}

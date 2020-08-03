@@ -1,0 +1,385 @@
+// Variables
+
+//
+// New Colors
+//
+
+// -- Grays
+$fiord-blue: #3d5170 !default;
+$shuttle-gray: #5a6169 !default;
+$reagent-gray: #818ea3 !default;
+$mischka: #cacedb !default;
+$athens-gray: #e9ecef !default;
+
+// -- Colors
+$salmon: #ff4169 !default;
+$royal-blue: #674eec !default;
+$java: #1adba2 !default;
+
+// New color maps
+//
+// Note: The $new-colors and $new-grays maps are not merged
+// because not all elements (eg. buttons) should have
+// grays modifiers.
+
+// New colors map
+$new-colors: () !default;
+$new-colors: map-merge(
+  (
+    "a-primary": $a-primary,
+    "salmon": $salmon,
+    "royal-blue": $royal-blue,
+    "java": $java,
+    "athens-gray": $athens-gray,
+  ),
+  $new-colors
+);
+
+// New grays map
+$new-grays: () !default;
+$new-grays: map-merge(
+  (
+    "fiord-blue": $fiord-blue,
+    "shuttle-gray": $shuttle-gray,
+    "reagent-gray": $reagent-gray,
+    "mischka": $mischka,
+    "athens-gray": $athens-gray,
+  ),
+  $new-grays
+);
+
+// Accent color
+// Override this color and recompile the package to quickly change
+// the general accent color theme.
+$accent-color: theme-color("primary") !default;
+
+// Typography
+$font-family-serif: "Public Sans", Georgia, serif !default;
+$font-family-monospace: "Roboto Mono", monospace;
+
+//
+// Utilities
+//
+
+// Transitions
+$transition-smooth-ease: cubic-bezier(0.5, 0.63, 0.18, 0.98) !default;
+
+// Overlays
+$overlay-opacity: 0.3 !default;
+$text-shadow-color: $black !default;
+$social-icons-hover-transition: opacity $transition-duration ease-in-out !default;
+
+// Body
+$body-transition: transform 350ms $transition-smooth-ease !default;
+
+//
+// Navbar
+//
+
+$navbar-width: 100% !default;
+
+$navbar-brand-font-size: $navbar-brand-font-size * 0.85 !default;
+$navbar-brand-image-max-height: 2rem !default;
+$navbar-brand-text-font-weight: 500 !default;
+$navbar-brand-text-font-family: $font-family-poppins-first !default;
+$navbar-brand-text-padding-x: 0.625rem !default;
+$navbar-brand-text-padding-y: 0 !default;
+$navbar-brand-text-margin: 0 !default;
+
+$navbar-sticky-light-background-color: $white !default;
+$navbar-sticky-dark-background-color: $black !default;
+
+$navbar-slide-transform: translateY(-110%) !default;
+$navbar-slide-visible-transform: translateY(0) !default;
+$navbar-slide-visible-box-shadow: none !default;
+
+$navbar-transition: transform 500ms $transition-smooth-ease,
+  background-color 500ms $transition-smooth-ease,
+  box-shadow 500ms $transition-smooth-ease !default;
+
+$navbar-social-icon-top: 3px !default;
+
+$navbar-social-large-icon-top: 1px !default;
+$navbar-social-large-icon-font-size: 140% !default;
+
+//
+// Navs
+//
+
+$nav-link-font-weight: 400 !default;
+$nav-link-font-size: 0.875rem !default;
+
+$sidebar-toggler-border-radius: 50% !default;
+$sidebar-toggler-icon-width: 20px !default;
+$sidebar-toggler-icon-height: 20px !default;
+
+//
+// Sidebars
+//
+
+$sidebar-height: 100vh !default;
+$sidebar-position: fixed !default;
+$sidebar-top: 0 !default;
+$sidebar-right: 0 !default;
+$sidebar-width: 280px !default;
+$sidebar-padding: 40px !default;
+$sidebar-overflow-y: auto !default;
+$sidebar-z-index: 10000 !default;
+$sidebar-transform: translateX(100%) !default;
+$sidebar-visible-transform: translateX(-280px) !default;
+
+// -- Left Sidebar
+$sidebar-left-transform: translateX(-100%) !default;
+$sidebar-left-left: 0 !default;
+$sidebar-left-visible-transform: translateX(280px) !default;
+
+// -- Dark Sidebar
+$sidebar-dark-background: $black !default;
+$sidebar-dark-link-color: $white !default;
+$sidebar-dark-close-background: #2a2a2a !default;
+$sidebar-dark-submenu-link-opacity: 0.5 !default;
+
+// -- Submenus
+$sidebar-submenu-link-opacity: 0.5 !default;
+
+// -- Social Items
+$sidebar-social-item-link-hover-color: $white !default;
+
+// -- Lists
+$sidebar-list-style: none !default;
+$sidebar-list-margin: 40px 0 0 0 !default;
+$sidebar-list-padding: 0 !default;
+
+// -- Links inside lists
+$sidebar-list-link-transition: opacity 250ms ease-in-out !default;
+$sidebar-list-link-color: $black !default;
+$sidebar-list-link-hover-text-decoration: none !default;
+$sidebar-list-link-hover-opacity: 0.6 !default;
+
+// -- List items
+$sidebar-list-item-margin: 12px 0 !default;
+
+// -- Close Button
+$sidebar-close-position: absolute !default;
+$sidebar-close-width: 25px !default;
+$sidebar-close-height: 25px !default;
+$sidebar-close-top: 15px !default;
+$sidebar-close-right: 15px !default;
+$sidebar-close-opacity: 1 !default;
+$sidebar-close-border-radius: 50% !default;
+$sidebar-close-background: #ddd !default;
+
+// -- Close Button Icon
+$sidebar-close-icon-opacity: 1 !default;
+$sidebar-close-icon-max-width: 17px !default;
+$sidebar-close-icon-max-height: 17px !default;
+$sidebar-close-icon-position: absolute !default;
+$sidebar-close-icon-margin: auto !default;
+$sidebar-close-icon-top: 50% !default;
+$sidebar-close-icon-left: 50% !default;
+$sidebar-close-icon-transform: translate(-50%, -50%) !default;
+
+// -- Sidebar Brand
+$sidebar-brand-display: flex !default;
+$sidebar-brand-font-size: $navbar-brand-font-size * 1.1 !default;
+$sidebar-brand-font-family: $font-family-poppins-first !default;
+$sidebar-brand-text-decoration: none !default;
+$sidebar-brand-image-margin-right: 15px !default;
+$sidebar-brand-text-margin-top: auto !default;
+$sidebar-brand-text-margin-bottom: auto !default;
+$sidebar-brand-font-weight: 500 !default;
+
+// -- Sidebar Menu List Items
+$sidebar-menu-list-item-font-size: 22px !default;
+
+// -- Sidebar Submenu List Items
+$sidebar-submenu-list-item-font-size: 13px !default;
+$sidebar-submenu-link-opacity: 0.3 !default;
+
+// -- Sidebar Social List Items
+$sidebar-social-list-item-display: inline-block !default;
+$sidebar-social-list-item-margin-right: 10px !default;
+$sidebar-social-list-item-link-opacity: 0.3 !default;
+$sidebar-social-list-item-link-hover-color: $black !default;
+$sidebar-social-list-item-link-hover-opacity: 0.6 !default;
+
+//
+// Hero Sections
+//
+
+// Hero - Play Button
+$hero-play-button-width: 70px !default;
+$hero-play-button-height: 70px !default;
+$hero-play-button-background: $salmon !default;
+$hero-play-button-color: $white !default;
+$hero-play-button-font-size: 40px !default;
+$hero-play-button-border-radius: 50% !default;
+$hero-play-button-transition: transform 250ms $transition-smooth-ease !default;
+$hero-play-button-icon-line-height: 65px !default;
+$hero-play-button-hover-transform: translate(-50%, -50%) scale(1.1) !default;
+$hero-play-button-hover-cursor: pointer !default;
+$hero-play-button-box-shadow: 0 2px 8px rgba($salmon, 0.5),
+  0 11px 28px rgba($salmon, 0.3);
+
+// Hero - Style 2 - Variation 1
+$hero-s2-v1-background-color: #b3d9e6 !default;
+
+$hero-s2-v1-image-wrapper-up-md-margin-left: -10% !default;
+$hero-s2-v1-image-wrapper-img-max-height: 400px !default;
+$hero-s2-v1-image-wrapper-img-max-width: 100% !default;
+
+$hero-s2-v1-artifact-background-color: #cbe3ee !default;
+$hero-s2-v1-artifact-width: 100% !default;
+$hero-s2-v1-artifact-height: 40% !default;
+
+// Hero - Style 2 - Variation 2
+$hero-s2-v2-feature-icon-font-size: 2.1875rem !default;
+
+// Hero - Style 2 - Variation 4
+$hero-s2-v4-background-size: 55% 100%, 100% 100% !default;
+$hero-s2-v4-background: url("/images/hero/style-2/variation-4/background-shape.svg")
+    no-repeat bottom,
+  radial-gradient(ellipse at center, #232323 0%, #000000 60%) no-repeat center
+    center,
+  #000;
+
+// Hero - Style 2 - Variation 5
+$hero-s2-v5-background: url("/images/hero/style-2/variation-5/background-shape.svg")
+    no-repeat top center,
+  radial-gradient(ellipse at center, #7b5edb 0%, #4530b4 100%) no-repeat center
+    center,
+  #4530b4;
+
+// Hero - Style 2 - Variation 6
+$hero-s2-v6-content-image-position: absolute !default;
+$hero-s2-v6-content-image-top: 0 !default;
+$hero-s2-v6-content-image-bottom: 0 !default;
+$hero-s2-v6-content-image-right: 0 !default;
+
+// Hero - Style 2 - Variation 7
+$hero-s2-v7-image-wrapper-img-max-height: 400px !default;
+$hero-s2-v7-image-wrapper-img-max-width: 100% !default;
+
+// Hero - Style 3 - Variation 3
+$hero-s3-v3-background-color: #f5f2ec !default;
+
+// Hero - Style 3 - Variation 4
+$hero-s3-v4-background-image: url("/images/hero/style-3/variation-4/background.png") !default;
+$hero-s3-v4-background-size: cover !default;
+$hero-s3-v4-background-color: #412dac !default;
+
+//
+// Call to Action Sections
+//
+
+// CTA - Variation 1
+$cta-v1-background-color: #f0f0f2 !default;
+$cta-v1-background-size: auto 100% !default;
+$cta-v1-background-repeat: no-repeat !default;
+$cta-v1-background-position: right 10% top !default;
+
+// CTA - Variation 4
+$cta-v4-background-color: #090909 !default;
+$cta-v4-background-size: auto 100% !default;
+$cta-v4-background-repeat: no-repeat !default;
+$cta-v4-background-position: left 10% top !default;
+
+// CTA - Variation 6
+$cta-v6-background-size: auto 100% !default;
+$cta-v6-background-position: center !default;
+$cta-v6-background-repeat: no-repeat !default;
+$cta-v6-background-color: #e1e0de !default;
+
+// CTA - Variation 7
+$cta-v7-background-color: #eee0d1 !default;
+$cta-v7-background-size: auto 100% !default;
+$cta-v7-background-repeat: no-repeat !default;
+$cta-v7-background-position: right top !default;
+
+// CTA - Variation 8
+$cta-v8-background-color: #eee0d1 !default;
+$cta-v8-background-size: auto 100% !default;
+$cta-v8-background-repeat: no-repeat, repeat !default;
+$cta-v8-background-position: right top !default;
+$cta-v8-background-image: url("/images/call-to-action/variation-8/background.jpg"),
+  url("/images/call-to-action/variation-8/background-repeat.jpg");
+
+//
+// Pricing
+//
+
+$pricing-border-width: 2px !default;
+
+$pricing-highlighted-background-color: $primary !default;
+$pricing-highlighted-border-color: #248cfc !default;
+$pricing-highlighted-subitems-color: $white !default;
+
+$pricing-item-check-icon: url("data:image/svg+xml,%3Csvg width='18' height='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M-3-5h24v24H-3z'/%3E%3Cpath fill='%23FFF' d='M6 11.17L1.83 7 .41 8.41 6 14 18 2 16.59.59z'/%3E%3C/g%3E%3C/svg%3E");
+$pricing-item-uncheck-icon: url("data:image/svg+xml,%3Csvg width='14' height='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23FFF' d='M14 1.41L12.59 0 7 5.59 1.41 0 0 1.41 5.59 7 0 12.59 1.41 14 7 8.41 12.59 14 14 12.59 8.41 7z'/%3E%3Cpath d='M-5-5h24v24H-5z'/%3E%3C/g%3E%3C/svg%3E");
+
+$pricing-item-check-color-icon: url("data:image/svg+xml,%3Csvg width='18' height='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M-3-5h24v24H-3z'/%3E%3Cpath fill='%2316C571' d='M6 11.17L1.83 7 .41 8.41 6 14 18 2 16.59.59z'/%3E%3C/g%3E%3C/svg%3E");
+$pricing-item-uncheck-color-icon: url("data:image/svg+xml,%3Csvg width='14' height='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23C4173C' d='M14 1.41L12.59 0 7 5.59 1.41 0 0 1.41 5.59 7 0 12.59 1.41 14 7 8.41 12.59 14 14 12.59 8.41 7z'/%3E%3Cpath d='M-5-5h24v24H-5z'/%3E%3C/g%3E%3C/svg%3E");
+
+$pricing-border: 5px solid $primary !default;
+
+$pricing-large-transform: scale(1.07) !default;
+$pricing-large-zindex: 100 !default;
+$pricing-large-margin: 0 10px !default;
+
+$pricing-table-item-padding-left: 20px !default;
+$pricing-table-item-font-size: 14px !default;
+$pricing-table-item-color: $black !default;
+
+$pricing-dark-border-color: #33373f !default;
+$pricing-dark-highlighted-border: 2px solid $primary !default;
+
+//
+// Testimonials
+//
+
+$testimonial-text-align: center !default;
+$testimonial-padding-top: 40px !default;
+
+$testimonial-author-avatar-img-max-width: 70px !default;
+
+$testimonial-rating-font-size: 20px !default;
+
+// Testimonial - Quote Icon
+$testimonial-before-width: 30px !default;
+$testimonial-before-height: 25px !default;
+$testimonial-before-background-image: url("/images/general/quote.svg") !default;
+$testimonial-before-background-size: 100% !default;
+$testimonial-before-top: 0px !default;
+$testimonial-before-left: 50% !default;
+$testimonial-before-transform: translate(-15px) !default;
+
+//
+// Card Post
+//
+
+// Components -> Card Post
+$card-post-padding-x: 1.5625rem !default;
+$card-post-padding-y: 1.5625rem !default;
+$card-post-padding: $card-post-padding-y $card-post-padding-x !default;
+
+$card-post-image-min-height: 10.3125rem !default;
+
+$card-post-author-avatar-width: 2.8125rem !default; // 45px
+$card-post-author-avatar-height: 2.8125rem !default; // 45px
+$card-post-author-avatar-small-width: 2.1875rem !default; // 35px
+$card-post-author-avatar-small-height: 2.1875rem !default; // 35px
+$card-post-author-avatar-box-shadow: 0 0 0 0.125rem $white,
+  0 0.1875rem 0.4375rem rgba($blueish-grey, 0.5) !default;
+
+// Components -> Card Post -> Variation 1
+$card-post-v1-author-transform: translateY(50%) !default;
+$card-post-v1-author-margin-left: 1.5625rem !default; // 25px
+$card-post-v1-category-top: 0.9375rem !default; // 15px
+$card-post-v1-category-right: 0.9375rem !default; // 15px
+$card-post-v1-body-padding-top: 2.1875rem !default; // 35px
+
+$card-post-aside-v1-body-padding: $card-post-padding !default;
+$card-post-aside-v1-author-left: 0.9375rem !default; // 15px
+$card-post-aside-v1-author-bottom: 0.9375rem !default; // 15px
+$card-post-aside-v1-category-top: 0.9375rem !default; // 15px
+$card-post-aside-v1-category-left: 0.9375rem !default; // 15px

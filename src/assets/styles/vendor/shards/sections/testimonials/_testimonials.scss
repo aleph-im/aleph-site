@@ -1,0 +1,38 @@
+// Shards Testimonials
+
+.testimonial {
+  text-align: $testimonial-text-align;
+  padding-top: $testimonial-padding-top;
+
+  &__author-avatar img {
+    max-width: $testimonial-author-avatar-img-max-width;
+  }
+
+  &__rating {
+    font-size: $testimonial-rating-font-size;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: $testimonial-before-width;
+    height: $testimonial-before-height;
+    background-image: $testimonial-before-background-image;
+    background-size: $testimonial-before-background-size;
+    top: $testimonial-before-top;
+    left: $testimonial-before-left;
+    transform: $testimonial-before-transform;
+  }
+
+  &--no-quote:before {
+    display: none;
+  }
+
+  .card.border {
+    border-width: 2px !important;
+  }
+}
+
+.bg-dark .testimonial:before {
+  opacity: .3;
+}

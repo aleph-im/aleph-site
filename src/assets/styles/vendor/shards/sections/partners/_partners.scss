@@ -1,0 +1,62 @@
+//
+// Shards Partners
+//
+
+.shards-partners {
+  .owl-carousel {
+    visibility: hidden;
+
+    &.owl-loaded {
+      visibility: visible;
+    }
+
+    .owl-stage {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      width: 50% !important;
+      display: flex;
+      margin: auto !important;
+    }
+
+    a {
+      img {
+        opacity: 0.75;
+        transition: opacity 250ms ease-in-out;
+      }
+
+      &:hover {
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .owl-dots {
+    display: table;
+    margin: 20px auto 0 auto;
+
+    .owl-dot {
+      width: 7px;
+      height: 7px;
+      background: #c6d2d9;
+      border-radius: 50%;
+      margin: 0 3px;
+
+      &.active {
+        background: #99adb8;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+
+  &.bg-dark .owl-dot {
+    background: #4b5256;
+  }
+}

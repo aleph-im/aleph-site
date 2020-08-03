@@ -1,0 +1,11 @@
+//
+// Counters
+//
+
+.shards-counter {
+
+  // Hide the progressbar text for line style.
+  .counter-item__type-line .progressbar-text {
+    visibility: hidden;
+  }
+}

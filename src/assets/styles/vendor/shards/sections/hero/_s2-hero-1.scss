@@ -1,0 +1,95 @@
+// Hero - Style 2 - Variation 1
+
+.shards-hero-s2--1 {
+  background-color: $hero-s2-v1-background-color;
+
+  .image-wrapper img {
+    max-height: $hero-s2-v1-image-wrapper-img-max-height;
+    max-width: $hero-s2-v1-image-wrapper-img-max-width;
+  }
+
+  // Background artifact
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background-color: $hero-s2-v1-artifact-background-color;
+    width: $hero-s2-v1-artifact-width;
+    height: $hero-s2-v1-artifact-height;
+    filter: blur(2px);
+  }
+
+  //
+  // Responsive
+  //
+
+  // XXL displays (> 1440px, eg. > MBP Retina)
+  //
+  // On displays larger than > 1440px the inner content
+  // should be converted into a container and horizontally
+  // centered.
+  @media (min-width: 1441px) {
+    .shards-hero__content {
+      @include make-container();
+      width: map-get($container-max-widths, xl);
+
+      .image-wrapper {
+        margin-left: 0;
+        @include make-col(5);
+      }
+
+      .content-wrapper {
+        // We're already offset by 1 (in HTML) and
+        // making a 5-col here too (see .image-wrapper).
+        // This means there's 1 col left, but it's ok
+        // since content already looks good left aligned.
+        @include make-col(5);
+      }
+
+      &__row {
+        @include make-row();
+      }
+    }
+
+    &:after {
+      height: 42.5%;
+    }
+  }
+
+  // > Medium viewports
+  @include media-breakpoint-up(md) {
+    .image-wrapper {
+      margin-left: $hero-s2-v1-image-wrapper-up-md-margin-left;
+    }
+  }
+
+  // < Medium viewports
+  @include media-breakpoint-down(md) {
+    text-align: center;
+    background: $hero-s2-v1-artifact-background-color;
+
+    .image-wrapper {
+      @include make-col(8);
+      margin: 0 auto;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    .content-wrapper {
+      margin: 0 auto;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  //  < Small viewports
+  @include media-breakpoint-down(sm) {
+    .image-wrapper {
+      @include make-col(10);
+    }
+  }
+}

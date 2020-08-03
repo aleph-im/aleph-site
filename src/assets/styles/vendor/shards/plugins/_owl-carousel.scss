@@ -1,0 +1,43 @@
+//
+// Owl Carousel
+//
+
+.owl-carousel {
+  position: relative;
+  visibility: hidden;
+
+  &.owl-loaded {
+    visibility: visible;
+  }
+
+  .owl-nav {
+
+    span {
+      font-size: 30px;
+    }
+
+    .owl-prev,
+    .owl-next {
+      width: 30px;
+      height: 30px;
+      top: 50%;
+      margin-top: -15px;
+
+      span {
+        line-height: 30px;
+      }
+    }
+
+    .owl-prev {
+      position: absolute;
+      left: 0;
+      margin-left: -50px;
+    }
+
+    .owl-next {
+      position: absolute;
+      right: 0;
+      margin-right: -50px;
+    }
+  }
+}

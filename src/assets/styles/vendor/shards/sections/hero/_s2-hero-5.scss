@@ -1,0 +1,11 @@
+// Hero - Style 2 - Variation 5
+
+.shards-hero-s2--5 {
+  background: $hero-s2-v5-background;
+
+  @include media-breakpoint-down(sm) {
+    .form-control {
+      width: 100% !important;
+    }
+  }
+}

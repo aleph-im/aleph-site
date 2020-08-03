@@ -1,0 +1,51 @@
+/*!
+ * Shards Pro v1.0.0 (https://designrevision.com/downloads/shards-pro)
+ * Based on: Bootstrap v4.1.3 (https://getbootstrap.com)
+ * Based on: Shards v2.1.0 (https://designrevision.com/downloads/shards)
+ * Copyright 2018-* DesignRevision (https://designrevision.com)
+ * Copyright 2018-* Catalin Vasile (http://catalin.me)
+ * License URL: https://designrevision.com/licenses/
+ */
+
+@import "overrides";
+
+// Base Shards UI Kit
+@import "node_modules/bootstrap/scss/functions";
+@import "grid";                                                                     // Grid adjustments.
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/shards-ui/src/scss/shards";
+
+// Core
+@import "variables";
+@import "reboot";
+@import "type";
+
+// Components
+@import "buttons";
+@import "utilities";
+@import "navbar";
+@import "nav";
+@import "sidebar";
+
+// Sections
+@import './sections/blog';
+@import './sections/call-to-action';
+@import './sections/contact';
+@import './sections/counter';
+@import './sections/feature';
+@import './sections/footer';
+@import './sections/gallery';
+@import './sections/hero';
+@import './sections/navbars';
+
+
+@import './sections/partners';
+@import './sections/pricing';
+@import './sections/testimonials';
+
+
+// Plugins
+@import './plugins/owl-carousel';
+
+// Components
+@import './components/card-post';

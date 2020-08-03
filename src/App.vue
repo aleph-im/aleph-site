@@ -1,24 +1,15 @@
 <template>
   <div id="app" class="d-flex flex-column">
-      <b-navbar toggleable="md" class="shadow bg-white" id="appnav" sticky>
-        <b-container class="align-baseline">
-          <b-navbar-brand>
-              <h4 class="my-auto mr-4">
-                <b-link :to="{name: 'Home'}">
-                  <img src="./assets/logo.svg" alt="logo" style="margin-bottom: 0.2em;"><span class="ml-2 d-inline-block align-bottom">aleph.im</span>
-                </b-link>
-              </h4>
-          </b-navbar-brand>
-          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-navbar toggleable="lg" class="shards-navbar navbar-light box-shadow-large--2 bg-white" id="appnav" sticky>
+        <b-container>
+          <b-link :to="{name: 'Home'}" class="navbar-brand">
+            <img src="./assets/logo-wide.svg" alt="aleph.im" style="max-height: 2rem">
+          </b-link>
+          <b-navbar-toggle target="nav-collapse" class="sidebar-toggler"></b-navbar-toggle>
           <b-collapse is-nav id="nav-collapse">
             <b-navbar-nav class="ml-auto">
-              <template v-for="(mitem, idx) in menuItems" >
-                <div v-if="mitem.type === 'button'" class="nav-item mx-md-4" :key="menu.length + idx">
-                  <a class="btn btn-secondary btn-pill d-block" :href="mitem.link">
-                    {{mitem.text}}
-                  </a>
-                </div>
-                <b-nav-item :href="mitem.link" class="align-middle d-block mx-md-2" v-else-if="mitem.link" :key="menu.length + idx">
+              <template v-for="(mitem, idx) in menu" >
+                <b-nav-item :href="mitem.link" class="align-middle d-block mx-md-2" v-if="mitem.link" :key="menu.length + idx">
                   {{mitem.text}}
                 </b-nav-item>
                 <b-nav-item-dropdown :to="{name: 'Page', params: {slug: mitem.slug}}" :key="menu.length + idx"
@@ -35,56 +26,116 @@
                 </b-nav-item>
               </template>
             </b-navbar-nav>
+            <b-navbar-nav class="ml-auto">
+              <template v-for="(mitem, idx) in fixedMenuItems" >
+                <li v-if="mitem.type === 'button'" class="nav-item mx-md-2 my-auto" :key="menu.length + idx">
+                  <b-btn :href="mitem.link" size="sm" variant="outline-black">
+                    {{mitem.text}}
+                  </b-btn>
+                </li>
+                <b-nav-item :href="mitem.link" class="align-middle d-block mx-md-2" v-else-if="mitem.link" :key="menu.length + idx">
+                  {{mitem.text}}
+                </b-nav-item>
+                <b-nav-item :to="{name: 'Page', params: {slug: mitem.slug}}" :key="menu.length + idx"
+                            class="align-middle d-block mx-md-2" v-else-if="mitem.slug">
+                  {{mitem.text||mitem.slug}}
+                </b-nav-item>
+              </template>
+            </b-navbar-nav>
           </b-collapse>
         </b-container>
       </b-navbar>
     <div id="content">
       <router-view></router-view>
     </div>
-    <footer id="sticky-footer">
-      <b-container>
-        <b-row class="my-3">
-          <b-col md="6" xl="8">
-            <h4 class="my-auto mr-4 brand">
-              <img src="./assets/logo.svg" alt="logo" style="margin-bottom: 0.2em;"><span class="ml-2 d-inline-block align-bottom">aleph</span>
-            </h4>
-          </b-col>
-          <b-col md="3" xl="2">
-            <h6 class="mt-2 mt-md-0">Resources</h6>
-            <ul>
+    <nav class="shards-footer shards-footer--6 navbar navbar-expand-md shards-navbar shards-navbar--responsive navbar-dark py-5 shards-navbar--slide-visible" style="background-color: #F8F8F8;">
+      <div class="container">
+        <div class="navbar__content-left mb-4 mb-md-0">
+          <div class="col-md-12 col-xl-8">
+            <a class="navbar-brand mb-4 pt-0" href="#">
+              <img class="navbar-brand__image" src="./assets/logo-wide.svg" alt="aleph.im logo">
+            </a>
+            <small class="text-black opacity-6 d-block mb-4 mb-sm-0">
+              © Copyright ©2019-2020 Aleph Project, all rights reserved.
+              <span v-if="!account"><b-link @click="login" href="#">Login</b-link></span>
+              <span v-else><b-link @click="logout" href="#">Logout</b-link> {{account.address}}</span>
+            </small>
+          </div>
+        </div>
+        <div class="navbar__content-right pl-md-3">
+          <div class="col">
+            <strong class="text-black d-inline-block mb-2">Aleph</strong>
+            <ul class="list-unstyled">
               <li>
-                <a href="https://github.com/aleph-im">Github</a>
+                <b-link class="text-black opacity-6" :to="{name: 'Page', params: {slug: 'chains'}}">
+                  <small>Chains</small>
+                </b-link>
               </li>
               <li>
-                <a href="https://github.com/moshemalawach/aleph-whitepaper/raw/master/aleph-whitepaper.pdf">Whitepaper</a>
+                <b-link class="text-black opacity-6" :to="{name: 'Page', params: {slug: 'team'}}">
+                  <small>Team</small>
+                </b-link>
               </li>
               <li>
-                <a href="https://explorer.aleph.im">Network Explorer</a>
+                <b-link class="text-black opacity-6" :to="{name: 'Page', params: {slug: 'jobs'}}">
+                  <small>Work With Us</small>
+                </b-link>
               </li>
             </ul>
-          </b-col>
-          <b-col md="3" xl="2">
-            <h6>Social</h6>
-            <a href="https://t.me/alephim">
-              <i class="fab fa-telegram-plane" />
-            </a>&nbsp;<a href="https://www.reddit.com/r/Aleph_im/">
-              <i class="fab fa-reddit" />
-            </a>&nbsp;<a href="https://twitter.com/aleph_im">
-              <i class="fab fa-twitter" />
-            </a>&nbsp;<a href="https://medium.com/aleph-im">
-              <i class="fab fa-medium" />
-            </a>
-          </b-col>
-        </b-row>
-      </b-container>
-      <div class="copyright">
-        <b-container class="d-flex justify-content-between">
-          <p>Copyright ©2019-2020 Aleph Project, all rights reserved.</p>
-          <p v-if="!account"><b-link @click="login" href="#">Login</b-link></p>
-          <p v-else>{{account.address}} <b-link @click="logout" href="#">Logout</b-link></p>
-        </b-container>
+          </div>
+          <div class="col">
+            <strong class="text-black d-inline-block mb-2">Resources</strong>
+            <ul class="list-unstyled">
+              <li>
+                <b-link class="text-black opacity-6" :to="{name: 'Page', params: {slug: 'developers'}}">
+                  <small>Developers</small>
+                </b-link>
+              </li>
+              <li>
+                <a class="text-black opacity-6" href="https://github.com/aleph-im/aleph-whitepaper/raw/master/aleph-whitepaper.pdf">
+                  <small>Whitepaper</small>
+                </a>
+              </li>
+              <li>
+                <b-link class="text-black opacity-6" :to="{name: 'Page', params: {slug: 'token'}}">
+                  <small>Token</small>
+                </b-link>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <strong class="text-black d-inline-block mb-2">Social</strong>
+          
+            <div class="row no-gutters" style="margin-left: -.5rem;">
+              <div class="col">
+                <ul class="p-0">
+                  <li class="d-inline-block mx-2">
+                    <a href="https://t.me/alephim" class="text-black">
+                      <i class="fab fa-telegram-plane"></i>
+                    </a>
+                  </li>
+                  <li class="d-inline-block mx-2">
+                    <a href="https://twitter.com/aleph_im" class="text-black">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="d-inline-block mx-2">
+                    <a href="https://t.me/alephim" class="text-black">
+                      <i class="fab fa-reddit-alien"></i>
+                    </a>
+                  </li>
+                  <li class="d-inline-block mx-2">
+                    <a href="https://medium.com/aleph-im" class="text-black">
+                      <i class="fab fa-medium-m"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
+    </nav>
   </div>
 </template>
 
@@ -100,8 +151,8 @@ export default {
       fixedMenuItems: [
         {
           type: 'text',
-          text: 'Github',
-          link: 'https://github.com/aleph-im'
+          text: 'developers',
+          slug: 'developers'
         },
         // {
         //   type: 'text',
@@ -152,102 +203,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'assets/styles/variables.scss';
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import '~bootstrap-vue/dist/bootstrap-vue.css';
-@import '~shards-ui/src/scss/shards.scss';
-@import 'assets/styles/site.scss';
-
-html, body {
-  height: 100%;
-}
-
-body {
-  background: url('assets/bg.svg') no-repeat center -100px;
-}
-
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-}
-
-#content {
-  flex: 1 0 auto;
-}
-
-#sticky-footer {
-  flex-shrink: none;
-}
-
-.navbar-brand img .logo {
-  fill: #aaa;
-}
-
-.navbar-brand a {
-  color: inherit;
-}
-
-$blueish-grey: #5A6169 !default;
-
-.VueCarousel-pagination {
-  z-index: 10;
-  margin-top: -2em;
-}
-
-.VueCarousel-navigation-button {
-  color: #374992 !important;
-}
-
-
-.VueCarousel-navigation-button:before {
-  border-color: #374992;
-  border-style: solid;
-  border-width: 3px 3px 0 0;
-  content: ' ';
-  display: inline-block;
-  height: 10px;
-  width: 10px;
-  transform: rotate(43deg);
-}
-
-.VueCarousel-navigation-prev:before {
-  transform: rotate(223deg);
-}
-
-
-.VueCarousel-navigation--disabled {
-  opacity: .3 !important;
-}
-
-.roadmap h4.card-title {
-  font-size: 1.2em;
-}
-
-.roadmap .VueCarousel {
-}
-
-.roadmap .VueCarousel-slide {
-  padding: 0 1em 2em 1em;
-}
-
-.roadmap .VueCarousel-wrapper {
-  overflow: hidden;
-}
-
-.roadmap .card {
-  // box-shadow: 0 .46875rem 1.1875rem rgba($blueish-grey, .2),
-  //             0 .25rem .53125rem rgba($blueish-grey, .12),
-  //             0 .125rem .1875rem rgba($blueish-grey, .1);
-  height: calc(100% - 2.75rem);
-}
-
-.heading {
-  @media (min-width: 992px) {
-    margin: 0 20%;
-  }
-  text-align: center;
-}
+@import 'assets/styles/main.scss';
 
 .CodeMirror {
   border: 1px solid #eee;

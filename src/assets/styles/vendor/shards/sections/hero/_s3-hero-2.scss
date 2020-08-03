@@ -1,0 +1,126 @@
+// Hero - Style 3 - Variation 2
+
+.shards-hero-s3--2 {
+
+  // Media
+  .image-wrapper {
+    position: relative;
+
+    .mobile-placeholder {
+      z-index: 1;
+    }
+
+    &__blob-bg,
+    &__sphere-teal,
+    &__sphere-yellow,
+    &__sphere-violet {
+      position: absolute;
+    }
+
+    // Background blob
+    &__blob-bg {
+      top: -15%;
+      z-index: -1;
+      transform: scale(1.1);
+      width: 100%;
+    }
+
+    // Spheres
+    &__sphere-red,
+    &__sphere-yellow,
+    &__sphere-gray,
+    &__sphere-gray-small {
+      position: absolute;
+    }
+
+    &__sphere-red {
+      bottom: 100px;
+      left: 55px;
+      max-width: 80px;
+    }
+
+    &__sphere-yellow {
+      top: 100px;
+      right: 72px;
+    }
+
+    &__sphere-gray {
+      right: 7px;
+      bottom: 0;
+      max-width: 65px;
+    }
+
+    &__sphere-gray-small {
+      top: 50px;
+      left: 34px;
+      max-width: 28px;
+    }
+  }
+
+  //
+  // Responsive
+  //
+
+  @include media-breakpoint-down(md) {
+    .content-wrapper {
+      text-align: center;
+    }
+
+    .image-wrapper {
+      max-width: 100%;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .image-wrapper {
+      &__sphere-red {
+        bottom: 135px;
+        left: 45px;
+      }
+
+      &__sphere-yellow {
+        right: 62px;
+      }
+
+      &__sphere-gray {
+        right: 27px;
+      }
+
+      &__sphere-gray-small {
+        left: 26px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    &.shards-hero {
+      overflow: hidden !important;
+    }
+
+    .image-wrapper {
+      &__sphere-red {
+        left: -65px;
+        bottom: 50px;
+      }
+
+      &__sphere-yellow {
+        right: -47px;
+        top: 60px;
+      }
+
+      &__sphere-gray {
+        right: -50px;
+        bottom: 74px;
+      }
+
+      &__sphere-gray-small {
+        left: -32px;
+      }
+
+      &__blob-bg {
+        top: 50%;
+        transform: translateY(-50%) scale(1.7);
+      }
+    }
+  }
+}

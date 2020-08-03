@@ -1,0 +1,26 @@
+// Hero - Style 5 - Variation 5
+
+.shards-hero-s5--5 {
+  .play-button {
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    width: $hero-play-button-width;
+    height: $hero-play-button-height;
+    background: $hero-play-button-background;
+    color: $hero-play-button-color;
+    font-size: $hero-play-button-font-size;
+    border-radius: $hero-play-button-border-radius;
+    transition: $hero-play-button-transition;
+    box-shadow: $hero-play-button-box-shadow;
+
+    i {
+      line-height: $hero-play-button-icon-line-height !important;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      cursor: $hero-play-button-hover-cursor;
+    }
+  }
+}

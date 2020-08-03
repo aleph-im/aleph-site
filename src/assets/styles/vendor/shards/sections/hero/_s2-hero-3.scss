@@ -1,0 +1,24 @@
+// Hero - Style 2 - Variation 3
+
+.shards-hero-s2--3 {
+  .feature {
+    display: flex;
+
+    &__icon {
+      font-size: $hero-s2-v2-feature-icon-font-size;
+    }
+  }
+
+  // < Small viewports
+  @include media-breakpoint-down(sm) {
+    .feature {
+      flex-flow: column;
+      text-align: center;
+    }
+  }
+
+  // < XS Viewports
+  @include media-breakpoint-down(xs) {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,32 @@
+//
+// Shards Features
+//
+
+.shards-features .shards-feature {
+  &__media {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    min-width: 40px;
+
+    &.icon {
+      max-width: 40px;
+      display: flex;
+      color: #fff;
+      text-align: center;
+
+      i {
+        display: flex;
+        margin: 0 auto;
+        line-height: 40px;
+        font-size: 24px;
+
+        &.material-icons {
+          position: relative;
+          top: 0;
+          left: 0.0313rem;
+        }
+      }
+    }
+  }
+}

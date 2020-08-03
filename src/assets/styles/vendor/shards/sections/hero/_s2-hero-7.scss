@@ -1,0 +1,94 @@
+// Hero - Style 2 - Variation 7
+
+.shards-hero-s2--7 {
+  .image-wrapper img {
+    max-height: $hero-s2-v7-image-wrapper-img-max-height;
+    max-width: $hero-s2-v7-image-wrapper-img-max-width;
+  }
+
+  //
+  // Responsive
+  //
+
+  // XXL displays (> 1440px, eg. > MBP Retina)
+  //
+  // On displays larger than > 1440px the inner content
+  // should be converted into a container and horizontally
+  // centered.
+  @media (min-width: 1441px) {
+    .shards-hero__content {
+      @include make-container();
+      width: map-get($container-max-widths, xl);
+
+      .image-wrapper {
+        margin-left: 0;
+        overflow: visible;
+        display: flex !important;
+        @include make-col(5);
+
+        img {
+          right: 0 !important;
+          margin-top: auto !important;
+          margin-bottom: auto !important;
+        }
+      }
+
+      .content-wrapper {
+        @include make-col(6);
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+      }
+
+      &__row {
+        @include make-row();
+      }
+    }
+  }
+
+  // > Large viewports
+  @include media-breakpoint-up(lg) {
+    .image-wrapper {
+      overflow: hidden;
+      min-height: 420px;
+
+      img {
+        position: relative;
+        right: -15% !important;
+      }
+    }
+  }
+
+  // < Medium viewports
+  @include media-breakpoint-down(md) {
+    text-align: center;
+
+    .image-wrapper {
+      @include make-col(8);
+      margin: 0 auto;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    .content-wrapper {
+      margin: 0 auto;
+    }
+  }
+
+  //  < Small viewports
+  @include media-breakpoint-down(sm) {
+
+    .content-wrapper {
+      padding: 50px 0;
+
+      h1 {
+        font-size: 35px;
+      }
+    }
+
+    .image-wrapper {
+      @include make-col(10);
+    }
+  }
+}

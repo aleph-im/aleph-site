@@ -1,0 +1,41 @@
+// Type Adjustments
+
+h1, .h1 {
+  line-height: 55px;
+}
+
+h2, .h2 {
+  line-height: 45px;
+}
+
+h3, .h3 {
+  line-height: 40px;
+}
+
+h4, .h4 {
+  line-height: 35px;
+}
+
+h5, .h5 {
+  line-height: 30px;
+}
+
+h6, .h6 {
+  line-height: 25px;
+}
+
+.text-serif {
+  font-family: $font-family-serif;
+}
+
+.text-sans-serif {
+  font-family: $font-family-sans-serif;
+}
+
+.text-monospace {
+  font-family: $font-family-monospace;
+}
+
+.text-italic {
+  font-style: italic;
+}

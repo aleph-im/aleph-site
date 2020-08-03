@@ -1,0 +1,60 @@
+// Hero - Style 4 - Variation 3
+
+.shards-hero-s4--3 {
+  background: linear-gradient(135deg, #195ea9 0%, #4b53a7 100%);
+
+  &.shards-hero {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &:after {
+    content: '';
+    height: 153px;
+    position: absolute;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .shards-hero {
+    &__background {
+      position: absolute;
+      max-height: 300px;
+      bottom: 0;
+      right: 0;
+      z-index: 3;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .shards-hero {
+      &__background {
+        width: 100%;
+      }
+
+      &__content {
+        text-align: center;
+
+        .container {
+          padding-bottom: 210px;
+        }
+      }
+    }
+
+    .browser-placeholder {
+      max-height: 350px;
+      width: 100% !important;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .shards-hero {
+      &__background {
+        height: 230px;
+        width: auto !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+// Hero - Style 3 - Variation 3
+
+.shards-hero-s3--3 {
+  background: $hero-s3-v3-background-color;
+  overflow: hidden;
+
+  .image-wrapper {
+    position: relative;
+
+    &__blob-bg,
+    &__sphere-red,
+    &__sphere-blue,
+    &__sphere-gray {
+      position: absolute;
+    }
+
+    &__blob-bg {
+      max-width: 600px;
+      top: -70px;
+      left: -20px;
+      z-index: -1;
+    }
+
+    &__sphere-blue {
+      left: 10%;
+      bottom: -3%;
+    }
+
+    &__sphere-gray {
+      right: -75px;
+      top: 50%;
+    }
+
+    &__sphere-red {
+      top: 5%;
+      left: -10px;
+      max-width: 80px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .content-wrapper {
+      text-align: center;
+
+      form {
+        display: table;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+
+    &.shards-hero {
+      overflow: hidden !important;
+    }
+
+    form {
+
+      .form-control,
+      .btn {
+        width: 100%;
+      }
+    }
+
+    .image-wrapper {
+      &__blob-bg {
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      &__sphere-blue {
+        bottom: 0;
+      }
+
+      &__sphere-gray {
+        right: 0;
+      }
+
+      &__sphere-red {
+        left: 0;
+        top: 70px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .image-wrapper {
+      &__blob-bg {
+        transform: scale(1.5);
+        top: 50px;
+      }
+
+      &__sphere-blue {
+        left: -20px;
+      }
+
+      &__sphere-gray {
+        right: -30px;
+      }
+
+      &__sphere-red {
+        left: -30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+// Hero - Style 4 - Variation 2
+
+.shards-hero-s4--2 {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    right: 0;
+    width: 30vw;
+    background: linear-gradient(-135deg, #7b5edb 0%, #4530b4 100%);
+  }
+
+  .shards-hero {
+
+    &__sphere-purple-1,
+    &__sphere-purple-2,
+    &__sphere-purple-3 {
+      position: absolute;
+      z-index: 1;
+    }
+
+    &__sphere-purple-1 {
+      max-width: 500px;
+      bottom: 0;
+      right: 0;
+      transform: translate(50%, 50%);
+    }
+
+    &__sphere-purple-2 {
+      max-width: 200px;
+      top: 15%;
+      right: 10%;
+    }
+
+    &__sphere-purple-3 {
+      max-width: 100px;
+      right: 30vw;
+      bottom: 15%;
+      transform: translateX(50%);
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &:after {
+      bottom: 0;
+      height: 50vh;
+      width: 100%;
+    }
+
+    .shards-hero {
+      &__sphere-purple-2 {
+        top: 40vh;
+        right: 5vw;
+      }
+
+      &__sphere-purple-3 {
+        left: -5vh;
+        bottom: 30vh;
+      }
+    }
+
+    .content-wrapper {
+      text-align: center;
+
+      form {
+        display: table;
+        margin: 0 auto;
+      }
+    }
+
+    .browser-placeholder {
+      width: 100% !important;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .content-wrapper {
+      form {
+
+        input,
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

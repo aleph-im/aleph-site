@@ -1,0 +1,40 @@
+// Misc Utilities
+
+.browser-placeholder,
+.mobile-placeholder {
+  background: $white;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.17);
+}
+
+// Browser Window
+.browser-placeholder {
+  position: relative;
+  background: url('/images/general/browser-action-buttons.svg') no-repeat top 15px  left 15px  #fff;
+
+  &__actions {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+  }
+}
+
+// Image Placeholder
+.image-placeholder {
+  background: $primary;
+  color: $white;
+  position: relative;
+
+  &--dark {
+    background: #1C1C1C;
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+}

@@ -1,0 +1,183 @@
+// Shards Pricing
+
+.pricing {
+
+  .card-header,
+  .card-footer {
+    background: none;
+  }
+
+  &.border,
+  [class*="border"] {
+    border-width: $pricing-border-width !important;
+  }
+
+  &.highlighted {
+    background: $pricing-highlighted-background-color;
+    border: 0 !important;
+
+    .card-header,
+    .card-body,
+    .card-footer {
+      border-color: $pricing-highlighted-border-color !important;
+    }
+
+    .pricing__title,
+    .pricing__price,
+    .pricing__item,
+    .pricing__meta {
+      color: $pricing-highlighted-subitems-color;
+    }
+
+    .pricing__item {
+      &--check:before {
+        background-image: $pricing-item-check-icon;
+      }
+
+      &--uncheck:before {
+        background-image: $pricing-item-uncheck-icon;
+      }
+    }
+
+    &--border {
+      border: $pricing-border !important;
+
+      .card-header,
+      .card-body,
+      .card-footer {
+        border: none;
+      }
+    }
+
+    &--large {
+      transform: $pricing-large-transform;
+      z-index: $pricing-large-zindex;
+      margin: $pricing-large-margin;
+
+      @include media-breakpoint-down(md) {
+        transform: scale(1);
+        margin: 0 0 15px 0;
+      }
+    }
+  }
+
+  // Highlighted background color.
+  @each $color,
+  $value in map-merge($theme-colors, $new-colors) {
+    &.highlighted--#{$color} {
+      background-color: $value !important;
+
+      .card-header,
+      .card-body,
+      .card-footer {
+        border-color: lighten($value, 7) !important;
+      }
+
+      &.highlighted--border {
+        border-color: $value !important;
+      }
+    }
+  }
+
+  // Highlighted border color.
+  @each $color,
+  $value in map-merge($theme-colors, $new-colors) {
+    &.highlighted--border.highlighted--#{$color} {
+      border-color: $value !important;
+      background: $white !important;
+
+      .card-header,
+      .card-body,
+      .card-footer {
+        border-color: #ececec !important;
+      }
+
+    }
+  }
+
+  &__table {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .pricing__item {
+      padding-left: $pricing-table-item-padding-left;
+      font-size: $pricing-table-item-font-size;
+      color: $pricing-table-item-color;
+      position: relative;
+
+      &--check:before,
+      &--uncheck:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -2px;
+        transform: translateY(-50%);
+        margin-top: -2px;
+      }
+
+      &--check {
+        &:before {
+          background-image: $pricing-item-check-color-icon;
+          background-size: 13px;
+          width: 13px;
+          height: 10px;
+        }
+      }
+
+      &--uncheck:before {
+        background-image: $pricing-item-uncheck-color-icon;
+        background-size: 11px;
+        width: 11px;
+        height: 11px;
+        left: -1px;
+      }
+    }
+  }
+}
+
+.bg-dark,
+.bg-black {
+
+  .pricing,
+  [class*="border"] {
+    border-color: $pricing-dark-border-color !important;
+  }
+
+  .pricing {
+    &.highlighted {
+      border: $pricing-dark-highlighted-border !important;
+
+      .pricing__item {
+        &--check {
+          &:before {
+            background-image: $pricing-item-check-color-icon;
+            background-size: 13px;
+            width: 13px;
+            height: 10px;
+          }
+        }
+
+        &--uncheck:before {
+          background-image: $pricing-item-uncheck-color-icon;
+          background-size: 11px;
+          width: 11px;
+          height: 11px;
+          left: -1px;
+        }
+      }
+    }
+  }
+
+  input[class*="border"]:focus,
+  textarea[class*="border"]:focus {
+    border-color: $input-focus-border-color !important;
+  }
+
+  .pricing__title,
+  .pricing__price,
+  .pricing__item,
+  .pricing__meta {
+    color: $white;
+  }
+}

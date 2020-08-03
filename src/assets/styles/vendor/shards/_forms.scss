@@ -1,0 +1,8 @@
+// Forms adjustments
+
+@each $color, $value in map-merge($theme-colors, $new-colors) {
+  .form-control--#{$color}:focus,
+  .form-control--#{$color}:focus:hover {
+    border-color: $value;
+  }
+}

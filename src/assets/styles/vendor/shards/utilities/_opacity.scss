@@ -1,0 +1,8 @@
+// Opacity helpers
+
+
+@for $value from 0 through 10 {
+  .opacity-#{$value} {
+    opacity: $value / 10;
+  }
+}

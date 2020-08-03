@@ -1,0 +1,26 @@
+//
+// Call to Action - Variation 4
+//
+
+.shards-cta--4 {
+  background-color: $cta-v4-background-color;
+  background-size: $cta-v4-background-size;
+  background-repeat: $cta-v4-background-repeat;
+  background-position: $cta-v4-background-position;
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $black;
+      opacity: .7;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+//
+// Counter - Variation 4
+//
+
+.shards-counter--4 .counter-item {
+  max-width: 150px;
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  .progressbar-text {
+    position: absolute;
+    top: 50%;
+  }
+}

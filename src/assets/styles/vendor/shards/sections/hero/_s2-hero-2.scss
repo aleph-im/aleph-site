@@ -1,0 +1,48 @@
+// Hero - Style 2 - Variation 2
+
+.shards-hero-s2--2 {
+  .media-element-wrapper {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+    &--loaded {
+
+      .media-element,
+      .play-button {
+        display: none;
+      }
+
+      iframe {
+        width: 100%;
+        min-height: 300px;
+      }
+    }
+  }
+
+  .play-button {
+    width: $hero-play-button-width;
+    height: $hero-play-button-height;
+    background: $hero-play-button-background;
+    color: $hero-play-button-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: $hero-play-button-font-size;
+    border-radius: $hero-play-button-border-radius;
+    transition: $hero-play-button-transition;
+    box-shadow: $hero-play-button-box-shadow;
+
+    i {
+      line-height: $hero-play-button-icon-line-height !important;
+    }
+
+    &:hover {
+      transform: $hero-play-button-hover-transform;
+      cursor: $hero-play-button-hover-cursor;
+    }
+  }
+}

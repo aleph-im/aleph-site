@@ -1,0 +1,32 @@
+// Hero - Style 3 - Variation 4
+
+.shards-hero-s3--4 {
+  background-image: $hero-s3-v4-background-image;
+  background-size: $hero-s3-v4-background-size;
+  background-color: $hero-s3-v4-background-color;
+
+  @include media-breakpoint-down(md) {
+    .content-wrapper {
+      text-align: center;
+
+      form {
+        display: table;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &.shards-hero {
+      overflow: hidden !important;
+    }
+
+    form {
+
+      .form-control,
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

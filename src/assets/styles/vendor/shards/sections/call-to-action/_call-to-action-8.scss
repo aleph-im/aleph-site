@@ -1,0 +1,36 @@
+//
+// Call to Action - Variation 8
+//
+
+.shards-cta--8 {
+  background-image: $cta-v8-background-image;
+  background-color: $cta-v8-background-color;
+  background-size: $cta-v8-background-size;
+  background-repeat: $cta-v8-background-repeat;
+  background-position: $cta-v8-background-position;
+
+  @include media-breakpoint-down(md) {
+
+    form input,
+    form button {
+      width: 100%;
+      min-width: 100% !important;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $warning;
+      opacity: .5;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// Overrides
+
+$google-fonts-import: "https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;1,400&display=swap|Roboto+Mono|Roboto:300,400,500,700" !default;
+
+$font-family-system-first: "Public Sans", "Roboto", -apple-system,
+  BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$font-family-poppins-first: $font-family-system-first;
+
+$light: #f9fafc;
+$border-color: #ececec; // $border-color: #dcdfe1;
+
+$dark: #0c0d0e;
+
+// $google-fonts-import: 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600|Roboto+Mono|Roboto:300,400,500,700' !default;

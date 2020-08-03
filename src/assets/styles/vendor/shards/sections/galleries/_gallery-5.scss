@@ -1,0 +1,22 @@
+// Shards Gallery - Variation 5
+
+.shards-gallery--5 {
+  .shards-gallery__item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .column-two .shards-gallery__image {
+    img {
+      position: absolute;
+      width: 100%;
+      transform: translate(0, -25%);
+    }
+
+    &.portrait img {
+      height: 100%;
+      width: auto !important;
+      transform: translate(0);
+    }
+  }
+}

@@ -1,0 +1,9 @@
+// Hero - Style 6 - Variation 3
+
+.shards-hero-s6--3 {
+  @include media-breakpoint-down(md) {
+    .shards-hero__content {
+      text-align: center;
+    }
+  }
+}

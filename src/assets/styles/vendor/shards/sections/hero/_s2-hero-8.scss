@@ -1,0 +1,29 @@
+// Hero - Style 2 - Variation 8
+
+.shards-hero-s2--8 {
+  @include media-breakpoint-down(md) {
+    h1 {
+      font-size: 45px;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .content-wrapper {
+      text-align: center;
+    }
+
+    .image-wrapper img {
+      width: auto;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .image-wrapper img {
+      max-width: 100%;
+    }
+  }
+}

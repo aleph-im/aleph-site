@@ -1,0 +1,18 @@
+// Hero - Style 5 - Variation 4
+
+.shards-hero-s5--4 {
+  @include media-breakpoint-down(md) {
+    .content-wrapper {
+      text-align: center;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+
+    form,
+    form input,
+    form button {
+      width: 100% !important;
+    }
+  }
+}
