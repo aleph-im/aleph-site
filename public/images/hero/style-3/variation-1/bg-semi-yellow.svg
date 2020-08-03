@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="372px" height="139px" viewBox="0 0 372 139" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="39.9647847%" cy="33.5739657%" fx="39.9647847%" fy="33.5739657%" r="107.510798%" gradientTransform="translate(0.399648,0.335740),scale(0.444542,1.000000),rotate(19.411955),translate(-0.399648,-0.335740)" id="radialGradient-1">
+            <stop stop-color="#F9EDD9" offset="0%"></stop>
+            <stop stop-color="#FED36D" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Style-1---Cover-2-Copy" transform="translate(-1068.000000, -163.000000)" fill="url(#radialGradient-1)" fill-rule="nonzero">
+            <path d="M1079.86742,7.875 L1133.00782,7.875 C1151.42434,121.843288 1250.26334,208.875 1369.42969,208.875 C1488.59604,208.875 1587.43504,121.843288 1605.85156,7.875 L1648.99195,7.875 C1632.4026,150.320045 1511.32689,260.875 1364.42969,260.875 C1217.53248,260.875 1096.45678,150.320045 1079.86742,7.875 Z" id="Rectangle-2" transform="translate(1364.429687, 134.375000) rotate(-42.000000) translate(-1364.429687, -134.375000) "></path>
+        </g>
+    </g>
+</svg>

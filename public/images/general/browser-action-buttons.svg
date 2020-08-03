@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="11px" viewBox="0 0 44 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Browser Actions</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Style-1---Cover-5" transform="translate(-240.000000, -603.000000)" fill-rule="nonzero">
+            <g id="Browser-Window" transform="translate(223.000000, 589.000000)">
+                <g id="Controls" transform="translate(17.000000, 14.000000)">
+                    <g id="Browser-Actions">
+                        <circle id="Close" fill="#FF6059" cx="5.5" cy="5.5" r="5.5"></circle>
+                        <circle id="Minimize" fill="#FFBD2E" cx="22.5" cy="5.5" r="5.5"></circle>
+                        <circle id="Expand" fill="#28CA42" cx="38.5" cy="5.5" r="5.5"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

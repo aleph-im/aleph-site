@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>power</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="power" transform="translate(-5.000000, -5.000000)">
+            <polygon id="Path" points="0 0 40 0 40 40 0 40"></polygon>
+            <polygon id="Path" fill="#4EA3FF" points="21.6666667 5 18.3333333 5 18.3333333 21.6666667 21.6666667 21.6666667"></polygon>
+            <path d="M29.7166667,8.61666667 L27.35,10.9833333 C29.9833333,13.1 31.6666667,16.35 31.6666667,20 C31.6666667,26.45 26.45,31.6666667 20,31.6666667 C13.55,31.6666667 8.33333333,26.45 8.33333333,20 C8.33333333,16.35 10.0166667,13.1 12.6333333,10.9666667 L10.2833333,8.61666667 C7.05,11.3666667 5,15.4333333 5,20 C5,28.2833333 11.7166667,35 20,35 C28.2833333,35 35,28.2833333 35,20 C35,15.4333333 32.95,11.3666667 29.7166667,8.61666667 Z" id="Path" fill="#86C0FF"></path>
+        </g>
+    </g>
+</svg>

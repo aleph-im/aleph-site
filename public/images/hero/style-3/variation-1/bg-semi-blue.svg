@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="179px" height="187px" viewBox="0 0 179 187" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="2.16537211%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#6D9EFE" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Style-1---Cover-2-Copy" transform="translate(0.000000, -837.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="Content" transform="translate(-196.000000, 0.000000)">
+                <path d="M187.5,1212 C83.9466094,1212 0,1128.05339 0,1024.5 C0,920.946609 83.9466094,837 187.5,837 C291.053391,837 375,920.946609 375,1024.5 C375,1128.05339 291.053391,1212 187.5,1212 Z M188,1150 C257.035594,1150 313,1094.03559 313,1025 C313,955.964406 257.035594,900 188,900 C118.964406,900 63,955.964406 63,1025 C63,1094.03559 118.964406,1150 188,1150 Z" id="Combined-Shape-Copy"></path>
+            </g>
+        </g>
+    </g>
+</svg>

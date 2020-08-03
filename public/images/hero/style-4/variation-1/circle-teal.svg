@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="59px" viewBox="0 0 59 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval Copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="32.9897253%" cy="33.4672389%" fx="32.9897253%" fy="33.4672389%" r="48.7277555%" id="radialGradient-1">
+            <stop stop-color="#C6F2F5" offset="0%"></stop>
+            <stop stop-color="#89D2D7" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Style-1---Cover-1" transform="translate(-771.000000, -483.000000)" fill="url(#radialGradient-1)" fill-rule="nonzero">
+            <g id="Right-Section" transform="translate(771.000000, 260.000000)">
+                <circle id="Oval-Copy-3" cx="29.5" cy="252.5" r="29.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

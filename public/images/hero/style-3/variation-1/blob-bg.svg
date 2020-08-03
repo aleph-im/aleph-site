@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="438px" height="499px" viewBox="0 0 438 499" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 1 Copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="28.3312553%" y1="88.3438114%" x2="28.3312553%" y2="49.5447021%" id="linearGradient-1">
+            <stop stop-color="#E3E4F4" offset="0%"></stop>
+            <stop stop-color="#F2F4FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Style-1---Cover-2-Copy" transform="translate(-159.000000, -257.000000)" fill="url(#linearGradient-1)">
+            <path d="M593.688959,455.374383 C583.254733,387.397812 546.45877,308.293765 482.279325,275.835178 C380.676168,224.448217 273.824792,285.545848 214.328025,370.676493 C133.203096,486.751079 127.862507,699.334032 290.023763,748.544042 C381.967486,776.447401 488.502158,722.098883 545.861182,650.867234 C589.860248,596.228958 604.253259,524.210821 593.688959,455.374383" id="Fill-1-Copy-3"></path>
+        </g>
+    </g>
+</svg>

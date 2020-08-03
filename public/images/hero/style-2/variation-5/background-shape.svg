@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1024px" viewBox="0 0 1440 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Background Shape (Gradient)</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="79.8635934%" gradientTransform="translate(0.500000,0.500000),scale(0.711111,1.000000),rotate(38.760582),translate(-0.500000,-0.500000)" id="radialGradient-1">
+            <stop stop-color="#A591E8" offset="0%"></stop>
+            <stop stop-color="#7E65EC" offset="50.4425578%"></stop>
+            <stop stop-color="#583BF0" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.400000006">
+        <g id="Style-1---Cover-5" fill="url(#radialGradient-1)">
+            <path d="M1440,0 L0,0 L0,509.448393 C29.4828866,512.93447 59.2725773,514.797814 89.1315464,514.932109 C135.229255,515.145887 182.874996,509.218006 231.36517,500.466141 C453.221509,460.423873 692.754538,361.266521 882.576495,520.745967 C1034.42474,648.320699 1154.63258,854.021596 1291.95216,1024 L1440,1024 L1440,0 Z" id="Background-Shape-(Gradient)"></path>
+        </g>
+    </g>
+</svg>

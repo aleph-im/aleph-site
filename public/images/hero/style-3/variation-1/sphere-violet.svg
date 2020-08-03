@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="159px" height="159px" viewBox="0 0 159 159" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="38.0306604%" cy="24.5086478%" fx="38.0306604%" fy="24.5086478%" r="74.3201769%" id="radialGradient-1">
+            <stop stop-color="#EDE8FE" offset="0%"></stop>
+            <stop stop-color="#9E8CFF" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Style-1---Cover-2-Copy" transform="translate(-443.000000, -591.000000)" fill="url(#radialGradient-1)" fill-rule="nonzero">
+            <g id="Content" transform="translate(-325.000000, 0.000000)">
+                <circle id="Oval" cx="847.5" cy="670.5" r="79.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

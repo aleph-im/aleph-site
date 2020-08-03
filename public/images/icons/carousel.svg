@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="26px" viewBox="0 0 34 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>carousel</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="carousel" transform="translate(-2.666667, -6.000000)">
+            <polygon id="Shape" fill="#4EA3FF" points="11.6666667 31.6666667 28.3333333 31.6666667 28.3333333 6.66666667 11.6666667 6.66666667"></polygon>
+            <polygon id="Path" fill="#86C0FF" points="3.33333333 28.3333333 10 28.3333333 10 10 3.33333333 10"></polygon>
+            <polygon id="Path" fill="#86C0FF" points="30 10 30 28.3333333 36.6666667 28.3333333 36.6666667 10"></polygon>
+            <polygon id="Path" points="0 0 40 0 40 40 0 40"></polygon>
+        </g>
+    </g>
+</svg>

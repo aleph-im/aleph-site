@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="629px" height="1024px" viewBox="0 0 629 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="28.3312553%" y1="88.3438114%" x2="28.3312553%" y2="49.5447021%" id="linearGradient-1">
+            <stop stop-color="#CED2F4" offset="0%"></stop>
+            <stop stop-color="#F2F4FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g id="Style-1---Cover-1" transform="translate(-811.000000, 0.000000)">
+            <g id="Group" transform="translate(812.000000, -140.000000)">
+                <path d="M1105.57877,503.688062 C1079.04058,331.090235 985.454496,130.238878 822.221846,47.8239889 C563.806509,-82.6515217 292.042965,72.4801388 140.720137,288.633501 C-65.6113035,583.355947 -79.1944464,1123.12068 333.243087,1248.06874 C567.09082,1318.91755 838.048869,1180.92242 983.934604,1000.05969 C1095.84091,861.328836 1132.44779,678.469159 1105.57877,503.688062" id="Fill-1-Copy-3" stroke="#D5DCE2"></path>
+                <path d="M968.680296,536.064204 C948.764742,406.513665 878.533177,255.756253 756.035425,193.896301 C562.107937,95.9624332 358.163302,212.403009 244.603262,374.645982 C89.7620738,595.862277 79.5686201,1001.00534 389.081886,1094.79035 C564.572644,1147.96889 767.912795,1044.39086 877.392575,908.636752 C961.372529,804.50649 988.844121,667.253489 968.680296,536.064204" id="Fill-1-Copy-4" fill="url(#linearGradient-1)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo-Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo-circle-filled-black" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M16.4499758,22.7362253 L13.5518366,14.1028274 L18.4231513,11.2040841 L21.0131706,14.9045432 L16.4499758,22.7362253 Z M14.5565491,24.4568632 L9.4997583,15.8850894 L12.3676897,14.8985017 L15.2350169,23.2847994 L14.5565491,24.4568632 Z M15.173393,5.54313678 L17.8866602,10.1993717 L9.13001452,14.8550024 L15.173393,5.54313678 Z M15,0 C6.71580474,0 0,6.71580474 0,15 C0,23.2841953 6.71580474,30 15,30 C23.2835911,30 29.9993959,23.2841953 29.9993959,15 C29.9993959,6.71580474 23.2835911,0 15,0 Z" id="Logo-Icon"></path>
+        </g>
+    </g>
+</svg>

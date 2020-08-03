@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Features" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Features---V4" transform="translate(-940.000000, -258.000000)">
+            <g id="Features" transform="translate(150.000000, 103.000000)">
+                <g id="Feature-1-Copy-3" transform="translate(782.000000, 149.000000)">
+                    <g id="Icon" transform="translate(1.000000, 0.000000)">
+                        <path d="M28.3258286,9.671875 C26.0587867,7.40625 22.9474672,6 19.4921826,6 C12.5816135,6 7,11.59375 7,18.5 C7,25.40625 12.5816135,31 19.4921826,31 C25.3239525,31 30.1863665,27.015625 31.5778612,21.625 L28.3258286,21.625 C27.0437774,25.265625 23.572858,27.875 19.4921826,27.875 C14.3170732,27.875 10.1113196,23.671875 10.1113196,18.5 C10.1113196,13.328125 14.3170732,9.125 19.4921826,9.125 C22.0875547,9.125 24.4015009,10.203125 26.0900563,11.90625 L21.0556598,16.9375 L32,16.9375 L32,6 L28.3258286,9.671875 Z" id="Path" fill="#4EA3FF"></path>
+                        <polygon id="Path" points="0 0 38 0 38 38 0 38"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

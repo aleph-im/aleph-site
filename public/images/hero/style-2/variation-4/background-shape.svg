@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1439px" height="724px" viewBox="0 0 1439 724" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="50%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="50%" cy="7.62126852%" fx="50%" fy="7.62126852%" r="44.6017985%" id="radialGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
+        </radialGradient>
+        <circle id="path-3" cx="799" cy="799" r="720"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.200000003">
+        <g id="Style-1---Cover-4" transform="translate(0.000000, -300.000000)" fill-rule="nonzero">
+            <g id="Group" transform="translate(-79.000000, 301.000000)">
+                <g id="Gradient-Circle">
+                    <use fill="url(#linearGradient-1)" xlink:href="#path-3"></use>
+                    <use fill="url(#radialGradient-2)" xlink:href="#path-3"></use>
+                </g>
+                <path d="M799,1598 C1240.27552,1598 1598,1240.27552 1598,799 C1598,357.724485 1240.27552,0 799,0 C357.724485,0 0,357.724485 0,799 C0,1240.27552 357.724485,1598 799,1598 Z" id="Dashed-Ring" stroke="#464646" stroke-width="2" stroke-dasharray="10,10"></path>
+                <path d="M799,1442 C1154.11909,1442 1442,1154.11909 1442,799 C1442,443.880906 1154.11909,156 799,156 C443.880906,156 156,443.880906 156,799 C156,1154.11909 443.880906,1442 799,1442 Z" id="Dashed-Ring-(Inner)" stroke="#000000" stroke-width="2" stroke-dasharray="10,10"></path>
+            </g>
+        </g>
+    </g>
+</svg>

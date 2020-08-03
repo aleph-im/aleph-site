@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="28px" viewBox="0 0 40 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>responsive</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="responsive" transform="translate(0.000000, -6.000000)">
+            <polygon id="Path" points="0 0 40 0 40 40 0 40"></polygon>
+            <path d="M6.66666667,10 L36.6666667,10 L36.6666667,6.66666667 L6.66666667,6.66666667 C4.83333333,6.66666667 3.33333333,8.16666667 3.33333333,10 L3.33333333,28.3333333 L0,28.3333333 L0,33.3333333 L23.3333333,33.3333333 L23.3333333,28.3333333 L6.66666667,28.3333333 L6.66666667,10 Z" id="Shape" fill="#86C0FF"></path>
+            <path d="M38.3333333,13.3333333 C39.25,13.3333333 40,14.0833333 40,15 L40,31.6666667 C40,32.5833333 39.25,33.3333333 38.3333333,33.3333333 L28.3333333,33.3333333 C27.4166667,33.3333333 26.6666667,32.5833333 26.6666667,31.6666667 L26.6666667,15 C26.6666667,14.0833333 27.4166667,13.3333333 28.3333333,13.3333333 L38.3333333,13.3333333 Z M36.6666667,28.3333333 L36.6666667,16.6666667 L30,16.6666667 L30,28.3333333 L36.6666667,28.3333333 Z" id="Combined-Shape" fill="#4EA3FF" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
