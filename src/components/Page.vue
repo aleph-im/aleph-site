@@ -9,9 +9,7 @@
     <p v-if="page === undefined" class="text-center my-4">
       Page loading.
     </p>
-    <b-container v-else>
-      <markdown-it-vue class="md-body" :content="page.content"/>
-    </b-container>
+    <markdown-it-vue class="md-body" :content="page.content" v-else />
   </div>
 </template>
 

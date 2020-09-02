@@ -1,31 +1,29 @@
 <template>
   <div>
-    <b-container>
-      <b-tabs class="my-2" lazy>
-        <b-tab title="Write" active>
-          <!-- <b-form-textarea id="textarea1"
-                   v-model="content"
-                   placeholder="Your page content"
-                   class="form-inherit mt-4"
-                   :rows="10"
-                   :max-rows="20"
-                   required>
-          </b-form-textarea> -->
-          <codemirror v-model="content" :options="cmOptions"></codemirror>
-        </b-tab>
-        <b-tab title="Preview" lazy>
-          <markdown-it-vue class="md-body" :content="content"/>
-        </b-tab>
-      </b-tabs>
-      <div class="clearfix float-right">
-        <b-button :variant="(content) ? 'primary' : 'danger'" @click="save" :disabled="(!(content))||processing">
-          {{processing ? 'Please wait...' : 'Save and stay'}}
-        </b-button>
-        <b-button :variant="(content) ? 'success' : 'danger'" @click="save_close" :disabled="(!(content))||processing">
-          {{processing ? 'Please wait...' : 'Save'}}
-        </b-button>
-      </div>
-    </b-container>
+    <b-tabs class="my-2" lazy>
+      <b-tab title="Write" active>
+        <!-- <b-form-textarea id="textarea1"
+                  v-model="content"
+                  placeholder="Your page content"
+                  class="form-inherit mt-4"
+                  :rows="10"
+                  :max-rows="20"
+                  required>
+        </b-form-textarea> -->
+        <codemirror v-model="content" :options="cmOptions"></codemirror>
+      </b-tab>
+      <b-tab title="Preview" lazy>
+        <markdown-it-vue class="md-body" :content="content"/>
+      </b-tab>
+    </b-tabs>
+    <div class="clearfix float-right">
+      <b-button :variant="(content) ? 'primary' : 'danger'" @click="save" :disabled="(!(content))||processing">
+        {{processing ? 'Please wait...' : 'Save and stay'}}
+      </b-button>
+      <b-button :variant="(content) ? 'success' : 'danger'" @click="save_close" :disabled="(!(content))||processing">
+        {{processing ? 'Please wait...' : 'Save'}}
+      </b-button>
+    </div>
   </div>
 </template>
 
