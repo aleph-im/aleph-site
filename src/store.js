@@ -72,7 +72,7 @@ export default new Vuex.Store({
       await commit('set_pages', pages)
     },
     async update_menu({ state, commit }) {
-      let menu_obj = await fetch_one(
+      let menu_obj = await aggregates.fetch_one(
         state.site_address, 'menu', {
         'api_server': state.api_server
       })
