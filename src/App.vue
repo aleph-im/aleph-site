@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="d-flex flex-column">
-      <b-navbar toggleable="lg" class="shards-navbar navbar-light box-shadow-large--2 bg-white" id="appnav" sticky>
+      <b-navbar toggleable="lg" class="shards-navbar navbar-light" id="appnav">
         <b-container>
           <b-link :to="{name: 'Home'}" class="navbar-brand">
             <img src="./assets/logo-wide.svg" alt="aleph.im" style="max-height: 2rem">
@@ -210,5 +210,9 @@ export default {
 .CodeMirror {
   border: 1px solid #eee;
   height: auto;
+}
+
+body {
+  color: #000;
 }
 </style>

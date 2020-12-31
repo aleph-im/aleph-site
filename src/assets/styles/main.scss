@@ -36,3 +36,41 @@ $spacers: (
 
 @import "./vendor/shards/shards-pro.scss";
 @import "~bootstrap/scss/utilities/spacing";
+
+.navbar-light .navbar-nav .nav-link {
+  color: #222220;
+  opacity: .5;
+  font-size: 14px;
+  font-weight: 500;
+  &:hover, &.router-link-active {
+    opacity: 1;
+  }
+}
+
+body {
+  background: url('/images/bkg.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.font-weight-bolder {
+  font-weight: 700 !important;
+}
+
+.btn-primary {
+  background: linear-gradient(83.49deg, #71C9FA -108.79%, #0054FF 76.92%);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(83.49deg, #71C9FA -108.79%, #0054FF 76.92%), rgba(255,255,255,.1);
+  background-blend-mode: overlay;
+  border: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-position: center 50px;
+    background-size: 110%;
+  }
+}

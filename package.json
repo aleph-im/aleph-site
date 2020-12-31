@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
+    "aleph-js": "^0.2.2",
     "axios": "^0.18.1",
     "bip32": "^2.0.4",
     "bip39": "^3.0.2",
