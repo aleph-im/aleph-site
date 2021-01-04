@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <b-button
       class="float-right mr-4"
       v-if="this.account && (this.site_address === this.account.address)"

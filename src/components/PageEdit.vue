@@ -10,10 +10,24 @@
                   :max-rows="20"
                   required>
         </b-form-textarea> -->
-        <codemirror v-model="content" :options="cmOptions"></codemirror>
+        <b-container>
+          <codemirror v-model="content" :options="cmOptions"></codemirror>
+        </b-container>
       </b-tab>
       <b-tab title="Preview" lazy>
-        <markdown-it-vue class="md-body" :content="content"/>
+        <b-container>
+          <markdown-it-vue class="md-body" :content="content"/>
+        </b-container>
+      </b-tab>
+      <b-tab title="Side-by-Side" lazy>
+        <b-row>
+          <b-col cols="6">
+            <codemirror v-model="content" :options="cmOptions"></codemirror>
+          </b-col>
+          <b-col cols="6">
+            <markdown-it-vue class="md-body" :content="content"/>
+          </b-col>
+        </b-row>
       </b-tab>
     </b-tabs>
     <div class="clearfix float-right">
