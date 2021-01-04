@@ -21,7 +21,7 @@
       </b-tab>
       <b-tab title="Side-by-Side" lazy>
         <b-row>
-          <b-col cols="6">
+          <b-col cols="6" class="sbs">
             <codemirror v-model="content" :options="cmOptions"></codemirror>
           </b-col>
           <b-col cols="6">
@@ -147,5 +147,9 @@ export default {
 .CodeMirror {
   border: 1px solid #eee;
   height: auto;
+}
+
+.sbs .CodeMirror {
+  font-size: 11px;
 }
 </style>
