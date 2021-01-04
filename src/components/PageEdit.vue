@@ -149,7 +149,7 @@ export default {
   height: auto;
 }
 
-.sbs .CodeMirror {
+.sbs .CodeMirror * {
   font-size: 11px;
 }
 </style>

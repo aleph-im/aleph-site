@@ -1,4 +1,4 @@
-$a-primary: #0054ff;
+$a-primary: #005FFF;
 
 // Spacers
 $spacer: 1rem;
@@ -124,6 +124,6 @@ body {
     min-height: 2.4em;
     line-height: 1.2em;
 
-    border-bottom: 1px solid #005FFF;
+    border-bottom: 1px solid $a-primary;
   }
 }
