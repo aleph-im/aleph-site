@@ -180,4 +180,26 @@ body {
     margin-bottom: 0;
     font-size: 30px;
   }
+  h6 {
+    color: inherit;
+  }
+}
+
+#content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    min-height: 32px;
+    padding-left: 32px;
+    background: url("/images/icons/bullet.svg") no-repeat left top;
+  }
+
+  &.list-blue li {
+    background: url("/images/icons/bullet-2.svg") no-repeat left top;
+    min-height: 38px;
+    line-height: 32px;
+    padding-left: 38px;
+  }
 }
