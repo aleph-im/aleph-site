@@ -96,6 +96,7 @@ export default {
       .use(MarkdownItContainer, 'text-center')
       .use(MarkdownItContainer, 'heading')
       .use(MarkdownItContainer, 'container')
+      .use(MarkdownItContainer, 'card')
       .use(MarkdownItAttrs)
       .use(MarkdownItGithubToc, {
         tocFirstLevel: 2,

@@ -37,6 +37,29 @@ $spacers: (
 @import "./vendor/shards/shards-pro.scss";
 @import "~bootstrap/scss/utilities/spacing";
 
+.fs-1 {
+  font-size: $h1-font-size
+}
+.fs-2 {
+  font-size: $h2-font-size
+}
+.fs-3 {
+  font-size: $h3-font-size
+}
+.fs-4 {
+  font-size: $h4-font-size
+}
+.fs-5 {
+  font-size: $h5-font-size
+}
+.fs-6 {
+  font-size: $h6-font-size
+}
+
+strong {
+  font-weight: 800;
+}
+
 .navbar-light .navbar-nav .nav-link {
   color: #222220;
   opacity: .5;
@@ -76,14 +99,16 @@ body {
 }
 
 .icon-bubble {
-  /* Ellipse 4 */
-
   width: 48px;
   height: 48px;
   border-radius: 32.5px;
 
   background: #FFFFFF;
   box-shadow: 0px 8px 16px rgba(0, 95, 255, 0.1);
+
+  &.square {
+    border-radius: 0.625rem;
+  }
 
   img {
     width: calc(100% - 20px);
@@ -98,6 +123,16 @@ body {
 
 .blue-shadow-2 {
   box-shadow: 0px 30px 82px rgba(0, 90, 255, 0.1);
+}
+
+.blue-shadow-3 {
+  // info element outer
+  box-shadow: 0px 0px 40px rgba(0, 90, 255, 0.1);
+}
+
+.blue-shadow-4 {
+  // info element inner logo
+  box-shadow: 0px 0px 8px rgba(0, 90, 255, 0.1);
 }
 
 
@@ -118,6 +153,10 @@ body {
 .feature-box {
   max-width: 200px;
 
+  &.bigger {
+    max-width: 400px;
+  }
+
   h6 {
     font-size: 18px;
     font-weight: 500;
@@ -125,5 +164,20 @@ body {
     line-height: 1.2em;
 
     border-bottom: 1px solid $a-primary;
+  }
+}
+
+.heading {
+  text-align: center;
+  color: #5E5E5E;
+  line-height: 1.4em;
+  font-weight: 400;
+  font-size: 18px;
+
+  h3 {
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 0;
+    font-size: 30px;
   }
 }
