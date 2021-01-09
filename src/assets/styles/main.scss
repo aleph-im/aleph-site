@@ -194,12 +194,17 @@ body {
     min-height: 32px;
     padding-left: 32px;
     background: url("/images/icons/bullet.svg") no-repeat left top;
+    &:last-child p {
+      margin-bottom: 0;
+    }
   }
 
   &.list-blue li {
     background: url("/images/icons/bullet-2.svg") no-repeat left top;
-    min-height: 38px;
-    line-height: 32px;
-    padding-left: 38px;
+    background-size: 22px;
   }
+}
+
+.text-muted {
+  color: #848484;
 }
