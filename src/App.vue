@@ -47,6 +47,9 @@
       </b-navbar>
     <div id="content">
       <router-view></router-view>
+      <div class="container px-3">
+        <small class="px-3"><em>Hosted on aleph.im!</em></small>
+      </div>
     </div>
     <nav class="shards-footer shards-footer--6 navbar navbar-expand-md shards-navbar shards-navbar--responsive navbar-dark py-5 shards-navbar--slide-visible" style="background-color: #F8F8F8;">
       <div class="container">
@@ -56,7 +59,9 @@
               <img class="navbar-brand__image" src="./assets/logo-wide.svg" alt="aleph.im logo">
             </a>
             <small class="text-black opacity-6 d-block mb-4 mb-sm-0">
-              © Copyright ©2019-2020 Aleph Project, all rights reserved.
+              © Copyright ©2019-2021 aleph.im Project, all rights reserved.
+              <a href="#/legal-mentions" class="text-muted">legal mentions</a> 
+              &nbsp;
               <span v-if="!account"><b-link @click="login" href="#">Login</b-link></span>
               <span v-else><b-link @click="logout" href="#">Logout</b-link> {{account.address}}</span>
             </small>
@@ -64,11 +69,11 @@
         </div>
         <div class="navbar__content-right pl-md-3">
           <div class="col">
-            <strong class="text-black d-inline-block mb-2">Aleph</strong>
+            <strong class="text-black d-inline-block mb-2">aleph.im</strong>
             <ul class="list-unstyled">
               <li>
                 <b-link class="text-black opacity-6" :to="{name: 'Page', params: {slug: 'chains'}}">
-                  <small>Chains</small>
+                  <small>Supported Blockchains</small>
                 </b-link>
               </li>
               <li>
@@ -129,6 +134,11 @@
                       <i class="fab fa-medium-m"></i>
                     </a>
                   </li>
+                  <li class="d-inline-block mx-2">
+                    <a href="https://www.linkedin.com/company/aleph-im/" class="text-black">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -151,7 +161,7 @@ export default {
       fixedMenuItems: [
         {
           type: 'text',
-          text: 'developers',
+          text: 'Developers',
           slug: 'developers'
         },
         // {
