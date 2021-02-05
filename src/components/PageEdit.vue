@@ -104,7 +104,6 @@ export default {
       values[this.slug] = {
         content: this.content
       }
-      console.log(this.account)
       this.processing = true
       let message = await aggregates.submit(
         this.site_address, 'pages', values, {
@@ -112,7 +111,6 @@ export default {
           channel: 'FOUNDATION',
           account: this.account }
       )
-      console.log(message)
       // this.$store.commit('sign_tx', {
       //   'tx': tx,
       //   'reason': 'Profile modification for ' + this.account.address
