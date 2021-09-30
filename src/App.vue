@@ -125,7 +125,7 @@
                     </a>
                   </li>
                   <li class="d-inline-block mx-2">
-                    <a href="https://t.me/alephim" class="text-black">
+                    <a href="https://www.reddit.com/r/Aleph_im/" class="text-black">
                       <i class="fab fa-reddit-alien"></i>
                     </a>
                   </li>
