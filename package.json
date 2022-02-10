@@ -19,7 +19,7 @@
     "markdown-it-attrs": "^2.4.1",
     "markdown-it-highlight": "^0.2.0",
     "markdown-it-vue": "^1.0.9",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "popper.js": "^1.12.9",
     "regenerator-runtime": "^0.13.2",
     "ripemd160": "^2.0.2",
